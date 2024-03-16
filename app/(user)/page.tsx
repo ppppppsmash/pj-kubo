@@ -13,6 +13,7 @@ interface TopDoc {
 interface Top {
   title: string
   description: string
+  order: string
   image: any
   body: TopDoc[]
 }
@@ -21,9 +22,10 @@ const query = groq`
   *[_type == 'top'] {
     title,
     description,
+    order,
     image,
     body
-  }
+  } | order(order asc)
 `
 
 export default async function Home() {

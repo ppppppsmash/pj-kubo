@@ -7,17 +7,22 @@ export default defineType({
   fields: [
     defineField({
       name: 'title', // FiledName
-      title: 'Title',
+      title: '標題',
+      type: 'string',
+    }),
+    defineField({
+      name: 'order',
+      title: '順序',
       type: 'string',
     }),
     defineField({
       name: 'description',
-      title: 'Description',
+      title: '小標題',
       type: 'string',
     }),
     defineField({
       name: 'image',
-      title: 'image',
+      title: '圖片',
       type: 'image',
       options: {
         hotspot: true,
@@ -25,7 +30,7 @@ export default defineType({
     }), 
     defineField({
       name: 'body',
-      title: 'Body',
+      title: '文章',
       type: 'array',
       of: [{ type: 'block' }]
     })
