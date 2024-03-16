@@ -16,6 +16,14 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'image',
+      title: 'image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }), 
+    defineField({
       name: 'body',
       title: 'Body',
       type: 'array',
