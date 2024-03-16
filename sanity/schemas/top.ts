@@ -1,23 +1,23 @@
 import {defineField, defineType} from 'sanity'
 
 export default defineType({
-  name: 'Top',
+  name: 'top',
   title: 'トップ',
   type: 'document',
   fields: [
     defineField({
-      title: 'Title',
       name: 'title', // FiledName
+      title: 'Title',
       type: 'string',
     }),
     defineField({
-      title: 'Description',
       name: 'description',
+      title: 'Description',
       type: 'string',
     }),
     defineField({
-      title: 'Body',
       name: 'body',
+      title: 'Body',
       type: 'array',
       of: [{ type: 'block' }]
     })
