@@ -28,6 +28,8 @@ const query = groq`
   } | order(order asc)
 `
 
+export const revalidate = 60
+
 export default async function Home() {
   const data: Top[] = await client.fetch(query)
   console.log(data)
