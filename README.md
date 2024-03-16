@@ -38,3 +38,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 install:
 npm create sanity@latest -- --project shmoz4zb --dataset production --provider google
+
+dashboard:
+https://www.sanity.io/organizations/personal/project/xfgovkcq/members/invitations

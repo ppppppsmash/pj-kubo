@@ -19,36 +19,36 @@ import { Logo } from "./Logo"
 const components: { title: string; href: string; description: string }[] = [
   {
     title: "Test",
-    href: "/docs/primitives/alert-dialog",
+    href: "/test2",
     description:
       "test test test test test test test test test test test test",
   },
   {
     title: "Test",
-    href: "/docs/primitives/hover-card",
+    href: "/test2",
     description:
       "test test test test test test test test test test test test",
   },
   {
     title: "Test",
-    href: "/docs/primitives/progress",
+    href: "/test2",
     description:
       "test test test test test test test test test test test test",
   },
   {
     title: "Test",
-    href: "/docs/primitives/scroll-area",
+    href: "/test2",
     description: "test test test test test test test test test test test test",
   },
   {
     title: "Test",
-    href: "/docs/primitives/tabs",
+    href: "/test2",
     description:
       "test test test test test test test test test test test test",
   },
   {
     title: "Test",
-    href: "/docs/primitives/tooltip",
+    href: "/test2",
     description:
       "test test test test test test test test test test test test",
   },
@@ -69,14 +69,14 @@ export function Header() {
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <NavigationMenuTrigger>測試</NavigationMenuTrigger>
+            <NavigationMenuTrigger>測試1</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <li className="row-span-3">
                   <NavigationMenuLink asChild>
                     <a
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                      href="/"
+                      href="/test1"
                     >
                       {/* <Icons.logo className="h-6 w-6" /> */}
                       <div className="mb-2 mt-4 text-lg font-medium">
@@ -88,20 +88,20 @@ export function Header() {
                     </a>
                   </NavigationMenuLink>
                 </li>
-                <ListItem href="/docs" title="Introduction">
+                <ListItem href="/test1" title="Introduction">
                   test test test test test test test test test test test test
                 </ListItem>
-                <ListItem href="/docs/installation" title="Installation">
+                <ListItem href="/test1" title="Installation">
                   test test test test test test test test test test test test
                 </ListItem>
-                <ListItem href="/docs/primitives/typography" title="Typography">
+                <ListItem href="/test1" title="Typography">
                   test test test test test test test test test test test test
                 </ListItem>
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>測試</NavigationMenuTrigger>
+            <NavigationMenuTrigger>測試2</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                 {components.map((component) => (
@@ -118,17 +118,17 @@ export function Header() {
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <Link href="/" legacyBehavior passHref>
+            <Link href="/test3" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                測試
+                測試3
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <Link href="/" legacyBehavior passHref>
+            <Link href="/contact" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                測試
+                聯繫我們
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
