@@ -34,7 +34,7 @@ export default async function Home() {
 
   return (
     <main>
-      <section className="my-10 border">
+      <section className="my-10 border border-black">
         <h1>secion 1</h1>
         <h3>{data[0]?.title}</h3>
         <p>{data[0]?.description}</p>
@@ -60,7 +60,7 @@ export default async function Home() {
       </section>
 
 
-      <section className="my-10 border">
+      <section className="my-10 border border-black">
         <h1>secion 2</h1>
         <h3>{data[1]?.title}</h3>
         <p>{data[1]?.description}</p>
@@ -87,7 +87,7 @@ export default async function Home() {
 
 
 
-      <section className="my-10 border">
+      <section className="my-10 border border-black">
         <h1>secion 3</h1>
         <h3>{data[2]?.title}</h3>
         <p>{data[2]?.description}</p>
@@ -112,7 +112,7 @@ export default async function Home() {
         )}
       </section>
 
-      <section className="my-10 border">
+      <section className="my-10 border border-black">
         <h1>secion 4</h1>
         <h3>{data[3]?.title}</h3>
         <p>{data[3]?.description}</p>

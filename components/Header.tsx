@@ -7,7 +7,7 @@ export const Header = () => {
         logo
       </div>
 
-      <ul className="flex gap-x-4">
+      <ul className="flex gap-x-5">
         <li>
           <Link
             href="/"
