@@ -56,86 +56,92 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function Header() {
   return (
-    <div className="fixed z-50 top-0 right-0 max-w-[1280px] w-[calc(100vw_-_240px)] h-[70px] bg-white rounded-bl-[100px]">
-      <div className="flex items-center pt-3.5 ml-12">
-        {/* <Logo /> */}
+    <div>
+      {/* <div className="fixed z-50 left-0 top-0 w-[150px] h-[140px] bg-white rounded-br-[200px]">
+        <Logo />
+      </div> */}
 
-        <NavigationMenu>
-          <NavigationMenuList>
-            <NavigationMenuItem>
-              <Link href="/" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  首頁
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
+      <div className="fixed z-50 top-0 right-0 max-w-[1580px] w-[calc(100vw_-_160px)] h-[70px] bg-white rounded-bl-[100px]">
+        <div className="flex items-center pt-3.5 ml-12">
+          <Logo />
 
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>測試1</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                  <li className="row-span-3">
-                    <NavigationMenuLink asChild>
-                      <a
-                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                        href="/test1"
-                      >
-                        {/* <Icons.logo className="h-6 w-6" /> */}
-                        <div className="mb-2 mt-4 text-lg font-medium">
-                          測試
-                        </div>
-                        <p className="text-sm leading-tight text-muted-foreground">
-                          test test test test test test test test test test test test
-                        </p>
-                      </a>
-                    </NavigationMenuLink>
-                  </li>
-                  <ListItem href="/test1" title="Introduction">
-                    test test test test test test test test test test test test
-                  </ListItem>
-                  <ListItem href="/test1" title="Installation">
-                    test test test test test test test test test test test test
-                  </ListItem>
-                  <ListItem href="/test1" title="Typography">
-                    test test test test test test test test test test test test
-                  </ListItem>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>測試2</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                  {components.map((component) => (
-                    <ListItem
-                      key={component.title}
-                      title={component.title}
-                      href={component.href}
-                    >
-                      {component.description}
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <Link href="/" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    首頁
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>測試1</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                    <li className="row-span-3">
+                      <NavigationMenuLink asChild>
+                        <a
+                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                          href="/test1"
+                        >
+                          {/* <Icons.logo className="h-6 w-6" /> */}
+                          <div className="mb-2 mt-4 text-lg font-medium">
+                            測試
+                          </div>
+                          <p className="text-sm leading-tight text-muted-foreground">
+                            test test test test test test test test test test test test
+                          </p>
+                        </a>
+                      </NavigationMenuLink>
+                    </li>
+                    <ListItem href="/test1" title="Introduction">
+                      test test test test test test test test test test test test
                     </ListItem>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
+                    <ListItem href="/test1" title="Installation">
+                      test test test test test test test test test test test test
+                    </ListItem>
+                    <ListItem href="/test1" title="Typography">
+                      test test test test test test test test test test test test
+                    </ListItem>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>測試2</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                    {components.map((component) => (
+                      <ListItem
+                        key={component.title}
+                        title={component.title}
+                        href={component.href}
+                      >
+                        {component.description}
+                      </ListItem>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
 
-            <NavigationMenuItem>
-              <Link href="/test3" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  測試3
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link href="/test3" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    測試3
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
 
-            <NavigationMenuItem>
-              <Link href="/contact" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  聯繫我們
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
+              <NavigationMenuItem>
+                <Link href="/contact" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    聯繫我們
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+        </div>
       </div>
     </div>
   )

@@ -5,7 +5,7 @@ export function Footer() {
     <div className="flex justify-between flex-wrap ml-5 items-center">
       {/* ↓ w-[calc(100%_-_80px)] */}
       <div
-        className="w-full flex flex-wrap justify-between items-center px-7 h-[90px] overflow-hidden rounded-tl-3xl
+        className="w-full flex flex-wrap justify-between items-center px-7 h-[90px] overflow-hidden rounded-tl-[40px]
           bg-gray"
       >
         <div className="flex items-center gap-x-4 ml-4">
