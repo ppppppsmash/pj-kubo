@@ -35,7 +35,7 @@ export default async function Home() {
   console.log(data)
 
   return (
-    <main>
+    <main className="w-full px-5 sm:w-[980px] sm:px-0 mx-auto">
       <section className="my-10 border border-black">
         <h1>section 1</h1>
         <h3>{data[0]?.title}</h3>
