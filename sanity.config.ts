@@ -10,6 +10,10 @@ import {structureTool} from 'sanity/structure'
 import {apiVersion, dataset, projectId} from './sanity/env'
 import {schema} from './sanity/schema'
 
+import { myTheme } from '@/app/(admin)/studio/theme/index'
+import { StudioNavbar } from '@/components/studio-ui/StudioNavbar'
+import { StudioLogo } from '@/components/studio-ui/StudioLogo'
+
 export default defineConfig({
   basePath: '/studio',
   projectId,
@@ -22,4 +26,11 @@ export default defineConfig({
     // https://www.sanity.io/docs/the-vision-plugin
     visionTool({defaultApiVersion: apiVersion}),
   ],
+  studio: {
+    components: {
+      logo: StudioLogo,
+      navbar: StudioNavbar
+    }
+  },
+  theme: myTheme
 })
