@@ -20,6 +20,7 @@ const config = {
     extend: {
       colors: {
         gray: "#F2F2F2",
+        scroll: "#D3D3D3",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -68,10 +69,25 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "scroll-indicator": {
+          "0%": {
+            transform: "translate3d(-1px, 0, 0)",
+            opacity: "0"
+          },
+          "20%": {
+            transform: "translate3d(-1px, 0, 0)",
+            opacity: "1"
+          },
+          "100%": {
+            transform: "translate3d(-1px, 8px, 0)",
+            opacity: "0"
+          }
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "scroll-indicator": "scroll-indicator 2s ease infinite",
       },
       typography: {
         DEFAULT: {
