@@ -1,15 +1,22 @@
-import config from '~/config.json';
+import config from '@/meta.json'
 
-const { name, url, twitter } = config;
-const defaultOgImage = `${url}/social-image.png`;
+interface BaseMetaParams {
+  title: string
+  description: string
+  prefix?: string
+  ogImage?: string
+}
+
+const { name, url, twitter } = config
+const defaultOgImage = `${url}/social-image.png`
 
 export function baseMeta({
   title,
   description,
   prefix = name,
   ogImage = defaultOgImage,
-}) {
-  const titleText = [prefix, title].filter(Boolean).join(' | ');
+}: BaseMetaParams) {
+  const titleText = [prefix, title].filter(Boolean).join(' | ')
 
   return [
     { title: titleText },
@@ -30,5 +37,5 @@ export function baseMeta({
     { property: 'twitter:site', content: url },
     { property: 'twitter:creator', content: twitter },
     { property: 'twitter:image', content: ogImage },
-  ];
+  ]
 }
