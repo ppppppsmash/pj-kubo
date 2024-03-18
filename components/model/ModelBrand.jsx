@@ -4,6 +4,7 @@ import { useInterval, usePrevious } from '@/hooks'
 import { Suspense, lazy, useEffect, useState } from 'react'
 import { useHydrated } from '@/hooks/useHydrated'
 import { Scroll } from '../Scroll'
+import { Title } from '../Title'
 
 const DisplacementSphere = lazy(() =>
   import('./model-core').then(module => ({ default: module.DisplacementSphere }))
@@ -32,6 +33,8 @@ export function ModelBrand() {
           </Suspense>
         )}
       </>
+
+      <Title />
 
       <Scroll />
     </section>

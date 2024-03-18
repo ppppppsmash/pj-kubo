@@ -183,10 +183,10 @@ export const DisplacementSphere = props => {
   }, [isInViewport, reduceMotion, rotationX, rotationY]);
 
   return (
-    <div className="relative h-[100vh]">
+    <div className="">
       {/* {({ visible, nodeRef }) => ( */}
         <canvas
-          className=""
+          className="absolute inset-0"
           aria-hidden
           ref={canvasRef}
         />
