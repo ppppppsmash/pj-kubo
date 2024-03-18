@@ -61,8 +61,8 @@ export function Header() {
         <Logo />
       </div> */}
 
-      <div className="fixed z-50 top-0 right-0 max-w-[1580px] w-[calc(100vw_-_160px)] h-[70px] bg-white rounded-bl-[100px]">
-        <div className="flex items-center pt-3.5 ml-12">
+      <div className="fixed z-50 top-0 right-0 max-w-[1580px] w-[calc(100vw)] h-[70px]">
+        <div className="flex items-center pt-3.5 ml-6">
           <Logo />
 
           <NavigationMenu>

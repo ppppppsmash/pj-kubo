@@ -4,6 +4,7 @@ import { groq } from 'next-sanity'
 import { client } from '@/sanity/lib/client'
 import { urlForImage } from '@/sanity/lib/image'
 import { MainVisual } from '@/components/MainVisual'
+import { ModelBrand } from '@/components/model/ModelBrand'
 
 interface TopDoc {
   children: {
@@ -37,7 +38,7 @@ export default async function Home() {
 
   return (
     <main className="w-full">
-      <MainVisual />
+      <ModelBrand />
 
       <div className="px-5 sm:w-[980px] sm:px-0 mx-auto">
         <section className="my-10 border border-black">
