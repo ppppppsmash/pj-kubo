@@ -3,8 +3,8 @@
 import { useState, useEffect } from 'react'
 import React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Loader } from './Loader.jsx'
-import { HomeSection } from '../HomeSection.jsx'
+import { Loader } from './Loader'
+import { HomeSection } from '../HomeSection'
 
 export default function MotionAnimate() {
   const [loading, setLoading] = useState<boolean>(true)
