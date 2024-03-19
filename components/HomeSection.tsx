@@ -47,9 +47,9 @@ export const HomeSection = async () => {
           <p>{data[0]?.description}</p>
 
           <div className="mt-6">
-            {data[0]?.body.map((block: any, index: number) => (
+            {data[0]?.body.map((block, index) => (
               <div key={index}>
-                {block.children.map((area: any, childIndex: number) => (
+                {block.children.map((area, childIndex) => (
                   <p key={childIndex}>{area.text}</p>
                 ))}
               </div>
@@ -73,9 +73,9 @@ export const HomeSection = async () => {
           <p>{data[1]?.description}</p>
 
           <div className="mt-6">
-            {data[1]?.body.map((block: any, index: number) => (
+            {data[1]?.body?.map((block, index) => (
               <div key={index}>
-                {block.children.map((child: any, childIndex: number) => (
+                {block.children.map((child, childIndex) => (
                   <p key={childIndex}>{child.text}</p>
                 ))}
               </div>
@@ -92,15 +92,17 @@ export const HomeSection = async () => {
           )}
         </section>
 
+
+
         <section className="my-10 border border-black">
           <h1>section 3</h1>
           <h3>{data[2]?.title}</h3>
           <p>{data[2]?.description}</p>
 
           <div className="mt-6">
-            {data[2]?.body.map((block: any, index: number) => (
+            {data[2]?.body?.map((block, index) => (
               <div key={index}>
-                {block.children.map((child: any, childIndex: number) => (
+                {block.children.map((child, childIndex) => (
                   <p key={childIndex}>{child.text}</p>
                 ))}
               </div>
@@ -123,9 +125,9 @@ export const HomeSection = async () => {
           <p>{data[3]?.description}</p>
 
           <div className="mt-6">
-            {data[3]?.body.map((block: any, index: number) => (
+            {data[3]?.body?.map((block, index) => (
               <div key={index}>
-                {block.children.map((child: any, childIndex: number) => (
+                {block.children.map((child, childIndex) => (
                   <p key={childIndex}>{child.text}</p>
                 ))}
               </div>
@@ -133,14 +135,14 @@ export const HomeSection = async () => {
           </div>
 
 
-          {/* { data[3]?.image && (
+          { data[3]?.image && (
             <Image
               src={urlForImage(data[3]?.image)}
               alt='test'
               width={100}
               height={100}
             />
-          )} */}
+          )}
         </section>
       </div>
     </div>
