@@ -4,10 +4,9 @@ import { useState, useEffect } from 'react'
 import React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Loader } from './Loader'
-import { ModelBrand } from '@/components/model/ModelBrand'
 import { HomeSection } from '../HomeSection'
 
-export const MotionAnimate = () => {
+export default function MotionAnimate() {
   const [loading, setLoading] = useState<boolean>(true)
 
   useEffect(() => {
