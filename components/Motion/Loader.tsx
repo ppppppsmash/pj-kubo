@@ -21,7 +21,7 @@ const item = {
     opacity: 1,
     y: 0,
     transition: {
-      ease: [0.6, 0.01, -0.05, 0.95],
+      ease: "easeInOut",
       duration: 1.6,
     },
   },
@@ -41,7 +41,7 @@ const itemMain = {
     opacity: 1,
     y: 0,
     transition: {
-      ease: [0.6, 0.01, -0.05, 0.95],
+      ease: "easeInOut",
       duration: 1.6,
     },
   },
@@ -49,12 +49,12 @@ const itemMain = {
 
 export const Loader = ({ setLoading }: any) => {
   return (
-    <motion.div className="loader">
+    <motion.div className="loader bg-white">
       <motion.div
         variants={container}
         onAnimationComplete={() => setLoading(false)}
         initial="hidden"
-        //animate="show"
+        animate="show"
         exit="exit"
         className="loader-inner"
       >
@@ -62,7 +62,7 @@ export const Loader = ({ setLoading }: any) => {
         <motion.div variants={itemMain} className="transition-image">
           <motion.img
             layoutId="main-image-1"
-            src="`/images/dummy.png"
+            src="`/images/image-2.png"
           />
         </motion.div>
         <ImageBlock variants={item} id="image-3" />
@@ -79,10 +79,15 @@ export const ImageBlock = ({ posX, posY, variants, id }: any) => {
       variants={variants}
       className={`image-block ${id}`}
       style={{
-        top: `${posY}vh`,
-        left: `${posX}vw `,
+        top: `${posX}vh`,
+        left: `${posY}vw `,
       }}
     >
+
+      <img
+        src={`/images/${id}.png`}
+        alt={id}
+      />
       {/* <Image
         src={process.env.PUBLIC_URL + `/images/${id}.webp`}
         fallback={process.env.PUBLIC_URL + `/images/${id}.jpg`}
