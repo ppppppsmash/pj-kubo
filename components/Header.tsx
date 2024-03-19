@@ -57,11 +57,7 @@ const components: { title: string; href: string; description: string }[] = [
 export function Header() {
   return (
     <div>
-      {/* <div className="fixed z-50 left-0 top-0 w-[150px] h-[140px] bg-white rounded-br-[200px]">
-        <Logo />
-      </div> */}
-
-      <div className="fixed z-50 top-0 right-0 max-w-[1580px] w-[calc(100vw)] h-[70px]">
+      <div className="fixed z-40 top-0 left-0 max-w-[1580px] w-[calc(100vw)] h-[70px]">
         <div className="flex items-center pt-3.5 ml-6">
           <Logo />
 
@@ -70,7 +66,7 @@ export function Header() {
               <NavigationMenuItem>
                 <Link href="/" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    首頁
+                    HOME
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
@@ -78,7 +74,7 @@ export function Header() {
               <NavigationMenuItem>
                 <Link href="/test3" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    公司沿革
+                    ABOUT
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
@@ -86,13 +82,13 @@ export function Header() {
               <NavigationMenuItem>
                 <Link href="/test3" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    關於我們
+                    PROFILE
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger>系列商品</NavigationMenuTrigger>
+                <NavigationMenuTrigger>BRAND</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                     <li className="row-span-3">
@@ -127,7 +123,7 @@ export function Header() {
               <NavigationMenuItem>
                 <Link href="/contact" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    聯繫我們
+                    CONTACT
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
