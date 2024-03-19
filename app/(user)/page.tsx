@@ -1,5 +1,5 @@
 
-import MotionAnimate from '@/components/motion/MotionAnimate'
+import MotionAnimate from '@/components/Motion/MotionAnimate'
 
 export default function Home() {
 
