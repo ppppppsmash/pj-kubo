@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react'
 import React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Loader } from './Loader'
-import { HomeSection } from '../HomeSection'
 
 export default function MotionAnimate() {
   const [loading, setLoading] = useState<boolean>(true)
@@ -22,15 +21,14 @@ export default function MotionAnimate() {
 
   return (
     <AnimatePresence>
-      {loading ? (
+      { loading && (
         <motion.div
           className="bg-white h-[100vh] w-[100vw] absolute z-50"
         >
           <Loader setLoading={setLoading} />
         </motion.div>
-      ): (
-        <HomeSection />
       )}
+
     </AnimatePresence>
   )
 }

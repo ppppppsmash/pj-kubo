@@ -31,8 +31,8 @@ const query = groq`
 
 export const revalidate = 60
 
-export const HomeSection = () => {
-  const data: any = client.fetch(query)
+export const HomeSection = async () => {
+  const data: Top[] = await client.fetch(query)
 
   console.log(data)
 
@@ -91,8 +91,6 @@ export const HomeSection = () => {
             />
           )}
         </section>
-
-
 
         <section className="my-10 border border-black">
           <h1>section 3</h1>
