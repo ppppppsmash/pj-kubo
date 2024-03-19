@@ -44,7 +44,7 @@ export const Title = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: showScroll ? 1 : 0, y: showScroll ? 0 : 20 }}
       transition={{ duration: 0.5 }}
-      className="max-w-[580px] w-full relative"
+      className="max-w-[580px] w-full absolute top-1/3 left-20 z-30"
     >
       <h1 className="font-black text-3xl mb-4">久保生医</h1>
       <h2 className="text-md text-xl font-bold mb-3">我們只跟世界最權威級的機構或大師合作，<br />希望用最自然的保養方式來幫助他人更健康。</h2>

@@ -3,10 +3,6 @@
 import React from "react"
 import { motion } from "framer-motion"
 
-//import Image from "./Image";
-
-// Import images
-
 const container = {
   show: {
     transition: {
@@ -45,7 +41,7 @@ const itemMain = {
       duration: 1.6,
     },
   },
-};
+}
 
 export const Loader = ({ setLoading }: any) => {
   return (
@@ -62,7 +58,7 @@ export const Loader = ({ setLoading }: any) => {
         <motion.div variants={itemMain} className="transition-image">
           <motion.img
             layoutId="main-image-1"
-            src="`/images/image-2.png"
+            src="/images/image-2.png"
           />
         </motion.div>
         <ImageBlock variants={item} id="image-3" />
@@ -88,11 +84,6 @@ export const ImageBlock = ({ posX, posY, variants, id }: any) => {
         src={`/images/${id}.png`}
         alt={id}
       />
-      {/* <Image
-        src={process.env.PUBLIC_URL + `/images/${id}.webp`}
-        fallback={process.env.PUBLIC_URL + `/images/${id}.jpg`}
-        alt={id}
-      /> */}
     </motion.div>
   );
 };
