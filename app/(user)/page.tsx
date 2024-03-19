@@ -1,10 +1,13 @@
+'use client'
+
+
 import Image from 'next/image'
 
 import { groq } from 'next-sanity'
 import { client } from '@/sanity/lib/client'
 import { urlForImage } from '@/sanity/lib/image'
-import { MainVisual } from '@/components/MainVisual'
 import { ModelBrand } from '@/components/model/ModelBrand'
+import { MotionAnimate } from '@/components/Motion/MotionAnimate'
 
 interface TopDoc {
   children: {
@@ -34,11 +37,16 @@ export const revalidate = 60
 
 export default async function Home() {
   const data: Top[] = await client.fetch(query)
+
   console.log(data)
+
+  
 
   return (
     <main className="w-full">
       <ModelBrand />
+
+      <MotionAnimate />
 
       <div className="px-5 sm:w-[980px] sm:px-0 mx-auto">
         <section className="my-10 border border-black">
