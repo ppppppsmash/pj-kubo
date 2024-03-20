@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react'
 import React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Loader } from './Loader'
-import { Title } from '../Title'
 
 export default function MotionAnimate() {
   const [loading, setLoading] = useState<boolean>(true)
@@ -31,11 +30,11 @@ export default function MotionAnimate() {
       )}
 
       { !loading && (
-        <div className='transition-image final'>
+        <div className="transition-image final">
           <motion.img
             transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1.6 }}
             src="/images/image-2.png"
-            layoutId='main-image-1'
+            layoutId="main-image-1"
           />
         </div>
       )}

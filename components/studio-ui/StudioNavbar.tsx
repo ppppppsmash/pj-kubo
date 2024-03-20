@@ -29,7 +29,7 @@ export function StudioNavbar(props: any) {
             className='font-bold text-white'
             style={{ fontWeight: 'bold', color: 'white', fontSize: '20px', lineHeight: '10px' }}
           >
-            久保生醫
+            久保生医
           </h1>
         </div>
       </div>

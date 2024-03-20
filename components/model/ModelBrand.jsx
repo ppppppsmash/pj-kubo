@@ -24,7 +24,7 @@ export function ModelBrand() {
   }, []);
 
   return (
-    <section className="h-[100vh] flex items-center justify-center flex-col">
+    <section className="">
       <>
         {isHydrated && (
           <Suspense>
@@ -32,7 +32,6 @@ export function ModelBrand() {
           </Suspense>
         )}
       </>
-
 
       <Scroll />
     </section>

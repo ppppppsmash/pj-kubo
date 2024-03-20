@@ -37,7 +37,7 @@ export const HomeSection = async () => {
   console.log(data)
 
   return (
-    <div>
+    <div className="pt-10">
       <ModelBrand />
 
       <div className="px-5 sm:w-[980px] sm:px-0 mx-auto">
