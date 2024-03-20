@@ -30,8 +30,6 @@ const query = groq`
   } | order(order asc)
 `
 
-export const revalidate = 60
-
 export const HomeSection = async () => {
   const data: Top[] = await client.fetch(query)
 
