@@ -36,18 +36,18 @@ export const HomeSection = async () => {
   console.log(data)
 
   return (
-    <div className="pt-8 sm:pt-[100px]">
+    <div className="pt-10 sm:pt-[100px]">
       <ModelBrand />
 
       <div className="px-5 sm:px-0">
         <section className="bg-gray pt-8 pb-16 mx-auto mt-10">
           <div className="max-w-[850px] w-full mx-auto grid grid-cols-3">
-            <div className="w-[200px] -mt-[100px] rounded-[50px] overflow-hidden col-span-1">
+            <div className="w-[180px] -mt-[100px] col-span-1">
               { data[0]?.image && (
                 <Image
                   src={urlForImage(data[0]?.image)}
                   alt='ABOUT'
-                  className="w-full"
+                  className="w-full rounded-[50px]"
                   width={100}
                   height={100}
                 />
@@ -55,10 +55,10 @@ export const HomeSection = async () => {
             </div>
 
             <div className="col-span-2 flex flex-col justify-around">
-              <h3>{data[0]?.title}</h3>
-              <p>{data[0]?.description}</p>
+              <h3 className="text-xl font-bold tracking-[.2em] mb-5">{data[0]?.title}</h3>
+              <p className="text-sm">{data[0]?.description}</p>
 
-              <div className="mt-6">
+              <div className="mt-6 text-sm leading-6">
                 {data[0]?.body.map((block, index) => (
                   <div key={index}>
                     {block.children.map((area, childIndex) => (
@@ -72,7 +72,7 @@ export const HomeSection = async () => {
                 <span className="overflow-hidden mx-auto">
                   <Link
                     className="sm:h-[55px] sm:w-[220px] sm:rounded-[50px] bg-black text-white relative
-                      flex flex-wrap items-center justify-center tracking-[.6em] text-xs pl-[15px]"
+                      flex flex-wrap items-center justify-center tracking-[.5em] text-xs pl-[15px]"
                     href="/about"
                   >
                     ABOUT
@@ -84,25 +84,13 @@ export const HomeSection = async () => {
         </section>
 
 
-        <section className="bg-white py-10 -mt-8 mb-10 rounded-[50px]">
-          <div className="mx-auto max-w-[850px]">
-            <h3>{data[1]?.title}</h3>
-            <p>{data[1]?.description}</p>
+        <section className="bg-white pt-16 pb-10 -mt-8 mb-10 rounded-[50px]">
+          <div className="mx-auto max-w-[850px] text-sm">
+            <h3 className="text-xl font-bold tracking-[.2em] mb-5">{data[1]?.title}</h3>
+            <p className="text-sm">{data[1]?.description}</p>
           </div>
 
-          <div className="w-full mx-auto overflow-hidden mt-6">
-            <span className="overflow-hidden mx-auto">
-              <Link
-                className="sm:h-[55px] sm:w-[220px] sm:rounded-[50px] bg-black text-white relative
-                  flex flex-wrap items-center justify-center tracking-[.6em] text-xs pl-[15px]"
-                href="/profile"
-              >
-                PROFILE
-              </Link>
-            </span>
-          </div>
-
-          <div className="mt-6">
+          <div className="mt-6 mx-auto max-w-[850px] leading-6 text-sm">
             {data[1]?.body?.map((block, index) => (
               <div key={index}>
                 {block.children.map((child, childIndex) => (
@@ -110,6 +98,18 @@ export const HomeSection = async () => {
                 ))}
               </div>
             ))}
+          </div>
+
+          <div className="w-[220px] mx-auto overflow-hidden mt-6">
+            <span className="overflow-hidden mx-auto">
+              <Link
+                className="sm:h-[55px] sm:w-[220px] sm:rounded-[50px] bg-black text-white relative
+                  flex flex-wrap items-center justify-center tracking-[.5em] text-xs pl-[15px]"
+                href="/profile"
+              >
+                PROFILE
+              </Link>
+            </span>
           </div>
 
           { data[1]?.image && (
@@ -125,7 +125,6 @@ export const HomeSection = async () => {
 
 
         <section className="my-10 border border-black">
-          <h1>section 3</h1>
           <h3>{data[2]?.title}</h3>
           <p>{data[2]?.description}</p>
 

@@ -207,7 +207,7 @@
 
 body.loading {
   overflow: hidden;
-  height: 100vh;
+  height: 100svh;
 }
 
 .loader {
@@ -282,9 +282,9 @@ body.loading {
   &.final {
     display: block;
     position: relative;
-    width: 70%;
+    width: 90%;
     margin-top: 56%;
-    margin-bottom: 5%;
+    margin-bottom: 15%;
     margin-left: auto;
     margin-right: auto;
     z-index: 100;

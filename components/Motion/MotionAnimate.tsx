@@ -23,7 +23,7 @@ export default function MotionAnimate() {
     <AnimatePresence>
       { loading && (
         <motion.div
-          className="bg-white h-[100vh] w-[100vw] absolute z-50"
+          className="bg-white h-[100svh] w-[100vw] absolute z-50"
         >
           <Loader setLoading={setLoading} />
         </motion.div>

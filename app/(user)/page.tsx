@@ -1,5 +1,5 @@
 
-import { HomeSection } from '@/components/HomeSection'
+import { HomeSection } from '@/components/Contents/Home'
 import MotionAnimate from '@/components/Motion/MotionAnimate'
 import { Hero } from '@/components/Hero'
 
@@ -8,10 +8,10 @@ export const revalidate = 60
 export default function Home() {
 
   return (
-    <main className="w-full">
+    <div>
       <Hero />
       <MotionAnimate />
       <HomeSection />
-    </main>
+    </div>
   )
 }

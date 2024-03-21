@@ -9,7 +9,7 @@ const container = {
       staggerChildren: 0.35,
     },
   },
-};
+}
 
 const item = {
   hidden: { opacity: 0, y: 200 },
@@ -29,7 +29,7 @@ const item = {
       duration: 0.8,
     },
   },
-};
+}
 
 const itemMain = {
   hidden: { opacity: 0, y: 200 },
@@ -66,8 +66,8 @@ export const Loader = ({ setLoading }: any) => {
         <ImageBlock variants={item} id="image-5" />
       </motion.div>
     </motion.div>
-  );
-};
+  )
+}
 
 export const ImageBlock = ({ posX, posY, variants, id }: any) => {
   return (
@@ -85,6 +85,6 @@ export const ImageBlock = ({ posX, posY, variants, id }: any) => {
         alt={id}
       />
     </motion.div>
-  );
-};
+  )
+}
 
