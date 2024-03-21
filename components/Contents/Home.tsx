@@ -41,9 +41,10 @@ export const HomeSection = async () => {
     <div className="pt-10 sm:pt-[100px]">
       <ModelBrand />
 
-      <div className="px-5 sm:px-0">
-        <section className="bg-gray pt-8 pb-16 mx-auto mt-10">
-          <div className="max-w-[850px] w-full mx-auto grid grid-cols-3">
+      <div>
+        {/* ABOUT */}
+        <section className="bg-gray pt-12 pb-20 mx-auto mt-10">
+          <div className="max-w-[900px] w-full mx-auto grid grid-cols-3">
             <div className="w-[180px] -mt-[100px] col-span-1">
               { data[0]?.image && (
                 <Image
@@ -58,9 +59,9 @@ export const HomeSection = async () => {
 
             <div className="col-span-2 flex flex-col justify-around">
               <h3 className="text-xl font-bold tracking-[.2em] mb-5">{data[0]?.title}</h3>
-              <p className="text-sm">{data[0]?.description}</p>
+              <p className="text-sm tracking-widest">{data[0]?.description}</p>
 
-              <div className="mt-6 text-sm leading-6">
+              <div className="mt-6 text-sm leading-6 tracking-widest">
                 {data[0]?.body.map((block, index) => (
                   <div key={index}>
                     {block.children.map((area, childIndex) => (
@@ -90,10 +91,10 @@ export const HomeSection = async () => {
         <section className="bg-white pt-16 pb-10 -mt-8 mb-10 rounded-[50px]">
           <div className="mx-auto w-[90%] sm:max-w-[900px] text-sm">
             <h3 className="text-xl font-bold tracking-[.2em] mb-5">{data[1]?.title}</h3>
-            <p className="text-sm">{data[1]?.description}</p>
+            <p className="text-sm tracking-widest">{data[1]?.description}</p>
           </div>
 
-          <div className="mt-6 mx-auto w-[90%] sm:max-w-[900px] leading-6 text-sm">
+          <div className="mt-6 mx-auto w-[90%] sm:max-w-[900px] leading-6 text-sm tracking-widest">
             {data[1]?.body?.map((block, index) => (
               <div key={index}>
                 {block.children.map((child, childIndex) => (
@@ -118,14 +119,14 @@ export const HomeSection = async () => {
 
                 <Handshake className="w-28 h-28 mx-auto" />
               </h3>
-              <p className="leading-7 text-sm">
+              <p className="leading-7 text-sm tracking-wide">
                 テストテストテストテストテストテストテストテストテストテストテストテストテストテスト
                 テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
               </p>
             </div>
 
             <div
-              className="pl-7 pr-16 py-14 w-full sm:w-[calc(100%_/_3_+50px)] rounded-[50px] sm:rounded-tl-[50px] sm:rounded-bl-[50px]
+              className="pl-7 pr-16 py-14 sm:-ml-[50px] w-full sm:w-[calc(100%_/_3_+50px)] rounded-[50px] sm:rounded-tl-[50px] sm:rounded-bl-[50px]
                 sm:rounded-tr-none sm:rounded-br-none bg-white z-20">
               <h3 className="text-center mb-8">
                 <span className="block text-[24px] tracking-[.2em] mb-4 font-extrabold">
@@ -137,13 +138,13 @@ export const HomeSection = async () => {
                 <HeartPulse className="w-28 h-28 mx-auto" />
 
               </h3>
-              <p className="leading-7 text-sm">
+              <p className="leading-7 text-sm tracking-wide">
                 テストテストテストテストテストテストテストテストテストテストテストテストテスト
                 テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
               </p>
             </div>
 
-            <div className="pl-7 pr-16 py-14 w-full sm:w-[calc(100%_/_3_+50px)] rounded-[50px] bg-gray z-30">
+            <div className="pl-7 pr-16 py-14 sm:-ml-[50px] w-full sm:w-[calc(100%_/_3_+50px)] rounded-[50px] bg-gray z-30">
               <h3 className="text-center mb-8">
                 <span className="block text-[24px] tracking-[.2em] mb-4 font-extrabold">
                   [03]
@@ -154,7 +155,7 @@ export const HomeSection = async () => {
 
                 <Barcode className="w-28 h-28 mx-auto" />
               </h3>
-              <p className="leading-7 text-sm">
+              <p className="leading-7 text-sm tracking-wide">
                 テストテストテストテストテストテストテストテストテストテストテストテストテスト
                 テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
               </p>

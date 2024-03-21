@@ -45,7 +45,7 @@ export const Hero = () => {
   }, [animate, scope])
 
   return (
-    <div className='space-y-6 md:my-16 absolute top-[25%] max-w-[580px] w-full z-50 left-20'>
+    <div className='space-y-6 md:my-16 absolute top-[15%] sm:top-[25%] w-[90%] sm:max-w-[580px] z-50 left-[5%] sm:left-20'>
       <div className='flex flex-col-reverse gap-8 md:flex-row md:justify-between'>
         <motion.div
           className='flex flex-col gap-4 will-change-[transform,opacity] md:max-w-xl'

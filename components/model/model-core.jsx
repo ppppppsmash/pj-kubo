@@ -111,6 +111,7 @@ export const DisplacementSphere = props => {
 
   useEffect(() => {
     const { width, height } = windowSize
+    console.log(width)
 
     const adjustedHeight = height + height * 0.3
     renderer.current.setSize(width, adjustedHeight)
@@ -186,7 +187,7 @@ export const DisplacementSphere = props => {
     <div className="">
       {/* {({ visible, nodeRef }) => ( */}
         <canvas
-          className="absolute inset-0"
+          className="absolute inset-0 !w-full"
           aria-hidden
           ref={canvasRef}
         />

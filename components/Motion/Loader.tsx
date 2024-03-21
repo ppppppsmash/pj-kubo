@@ -55,7 +55,7 @@ export const Loader = ({ setLoading }: any) => {
         className="loader-inner"
       >
         <ImageBlock variants={item} id="image-1" />
-        <motion.div variants={itemMain} className="transition-image">
+        <motion.div variants={itemMain} className="absolute flex items-center justify-center top-0 left-0">
           <motion.img
             layoutId="main-image-1"
             src="/images/image-2.png"
