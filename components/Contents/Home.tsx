@@ -6,6 +6,8 @@ import { urlForImage } from '@/sanity/lib/image'
 import { ModelBrand } from '@/components/model/ModelBrand'
 import Link from 'next/link'
 
+import { Handshake, HeartPulse, Barcode } from 'lucide-react'
+
 interface TopDoc {
   children: {
     text: string
@@ -72,7 +74,7 @@ export const HomeSection = async () => {
                 <span className="overflow-hidden mx-auto">
                   <Link
                     className="sm:h-[55px] sm:w-[220px] sm:rounded-[50px] bg-black text-white relative
-                      flex flex-wrap items-center justify-center tracking-[.5em] text-xs pl-[15px]"
+                      flex flex-wrap items-center justify-center tracking-[.5em] text-xs pl-[12px]"
                     href="/about"
                   >
                     ABOUT
@@ -84,13 +86,14 @@ export const HomeSection = async () => {
         </section>
 
 
+        {/* PROFILE */}
         <section className="bg-white pt-16 pb-10 -mt-8 mb-10 rounded-[50px]">
-          <div className="mx-auto max-w-[850px] text-sm">
+          <div className="mx-auto w-[90%] sm:max-w-[900px] text-sm">
             <h3 className="text-xl font-bold tracking-[.2em] mb-5">{data[1]?.title}</h3>
             <p className="text-sm">{data[1]?.description}</p>
           </div>
 
-          <div className="mt-6 mx-auto max-w-[850px] leading-6 text-sm">
+          <div className="mt-6 mx-auto w-[90%] sm:max-w-[900px] leading-6 text-sm">
             {data[1]?.body?.map((block, index) => (
               <div key={index}>
                 {block.children.map((child, childIndex) => (
@@ -100,11 +103,69 @@ export const HomeSection = async () => {
             ))}
           </div>
 
+          <div className="block sm:flex mx-auto w-[90%] sm:max-w-[1000px] my-10">
+            <div
+              className="pl-7 pr-16 py-14 w-full sm:w-[calc(100%_/_3_+50px)] rounded-[50px] sm:rounded-tl-[50px] sm:rounded-bl-[50px]
+                sm:rounded-tr-none sm:rounded-br-none bg-gray z-10"
+            >
+              <h3 className="text-center mb-8">
+                <span className="block text-[24px] tracking-[.2em] mb-4 font-extrabold">
+                  [01]
+                </span>
+                <span className="block text-sm tracking-[.2em] font-bold mb-8">
+                  国際貿易
+                </span>
+
+                <Handshake className="w-28 h-28 mx-auto" />
+              </h3>
+              <p className="leading-7 text-sm">
+                テストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+                テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+              </p>
+            </div>
+
+            <div
+              className="pl-7 pr-16 py-14 w-full sm:w-[calc(100%_/_3_+50px)] rounded-[50px] sm:rounded-tl-[50px] sm:rounded-bl-[50px]
+                sm:rounded-tr-none sm:rounded-br-none bg-white z-20">
+              <h3 className="text-center mb-8">
+                <span className="block text-[24px] tracking-[.2em] mb-4 font-extrabold">
+                  [02]
+                </span>
+                <span className="block text-sm tracking-[.2em] font-bold mb-8">
+                  商品製造
+                </span>
+                <HeartPulse className="w-28 h-28 mx-auto" />
+
+              </h3>
+              <p className="leading-7 text-sm">
+                テストテストテストテストテストテストテストテストテストテストテストテストテスト
+                テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+              </p>
+            </div>
+
+            <div className="pl-7 pr-16 py-14 w-full sm:w-[calc(100%_/_3_+50px)] rounded-[50px] bg-gray z-30">
+              <h3 className="text-center mb-8">
+                <span className="block text-[24px] tracking-[.2em] mb-4 font-extrabold">
+                  [03]
+                </span>
+                <span className="block text-sm tracking-[.2em] font-bold mb-8">
+                  美容服務
+                </span>
+
+                <Barcode className="w-28 h-28 mx-auto" />
+              </h3>
+              <p className="leading-7 text-sm">
+                テストテストテストテストテストテストテストテストテストテストテストテストテスト
+                テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+              </p>
+            </div>
+          </div>
+
           <div className="w-[220px] mx-auto overflow-hidden mt-6">
             <span className="overflow-hidden mx-auto">
               <Link
                 className="sm:h-[55px] sm:w-[220px] sm:rounded-[50px] bg-black text-white relative
-                  flex flex-wrap items-center justify-center tracking-[.5em] text-xs pl-[15px]"
+                  flex flex-wrap items-center justify-center tracking-[.5em] text-xs pl-[12px]"
                 href="/profile"
               >
                 PROFILE
@@ -124,7 +185,7 @@ export const HomeSection = async () => {
 
 
 
-        <section className="my-10 border border-black">
+        <section className="bg-gray pt-16 pb-10 -mt-8 mb-10 rounded-tl-[50px] rounded-tr-[50px]">
           <h3>{data[2]?.title}</h3>
           <p>{data[2]?.description}</p>
 
