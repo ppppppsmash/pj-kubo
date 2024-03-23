@@ -275,7 +275,7 @@ export const HomeSection = async () => {
                 <Link
                   className="sm:h-[55px] sm:w-[220px] sm:rounded-[50px] bg-black text-white relative
                     flex flex-wrap items-center justify-center tracking-[.5em] text-xs pl-[12px]"
-                  href="/news"
+                  href="/contact"
                 >
                   CONTACT
                 </Link>

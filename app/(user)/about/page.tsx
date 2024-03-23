@@ -5,7 +5,7 @@ export default async function About() {
       <section className="pt-[50px] sm:pt-[100px] bg-gray w-[100vw] overflow-hidden pb-20">
         <div className="pt-[60px] px-[10%] max-w-[1600px] mx-auto">
           <h1
-            className="font-bold text-[60px] sm:text-[190px] leading-[50px] sm:leading-[120px] tracking-[.01em] duration-100 delay-100"
+            className="font-bold text-[60px] sm:text-[180px] leading-[50px] sm:leading-[120px] tracking-[.01em] duration-100 delay-100"
           >
             ABOUT
           </h1>
