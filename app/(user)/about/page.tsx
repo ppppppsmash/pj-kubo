@@ -2,10 +2,10 @@
 export default async function About() {
   return (
     <div>
-      <section className="sm:pt-[100px] bg-gray w-[100vw] overflow-hidden pb-20">
+      <section className="pt-[50px] sm:pt-[100px] bg-gray w-[100vw] overflow-hidden pb-20">
         <div className="pt-[60px] px-[10%] max-w-[1600px] mx-auto">
           <h1
-            className="font-bold text-[190px] leading-[120px] tracking-[.01em] duration-100 delay-100"
+            className="font-bold text-[60px] sm:text-[190px] leading-[50px] sm:leading-[120px] tracking-[.01em] duration-100 delay-100"
           >
             ABOUT
           </h1>
@@ -27,7 +27,7 @@ export default async function About() {
       </section>
 
       <section className="py-20 px-[8%] bg-black">
-        <div className="flex gap-[8vw]">
+        <div className="flex sm:flex-row flex-col gap-[8vw]">
           <h2 className="mt-5 font-semibold text-[32px] leading-[20px] tracking-[.01em] text-white">COMPANY</h2>
 
           <dl className="-mt-[27px] leading-[36px] tracking-[.01em] text-[#F5F5F5] flex flex-wrap max-w-[1200px]">
@@ -53,7 +53,7 @@ export default async function About() {
 
       <section className="bg-[#F5F5F5] pb-20 mb-10">
         <div className="px-[10%]">
-          <div className="flex justify-around pt-[127px] gap-5">
+          <div className="flex sm:flex-row flex-col justify-around pt-20 sm:pt-[127px] gap-5">
             <h2 className="font-semibold leading-[30px] tracking-[.01em] text-[#545454]">
               CEO<br />MESSAGE
             </h2>

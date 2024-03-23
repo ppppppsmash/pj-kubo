@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image'
 
 import { groq } from 'next-sanity'
@@ -5,8 +6,10 @@ import { client } from '@/sanity/lib/client'
 import { urlForImage } from '@/sanity/lib/image'
 import { ModelBrand } from '@/components/model/ModelBrand'
 import Link from 'next/link'
+import { Swiper, SwiperSlide } from 'swiper/react'
 
 import { Handshake, HeartPulse, Barcode } from 'lucide-react'
+import 'swiper/css'
 
 interface TopDoc {
   children: {
@@ -70,18 +73,6 @@ export const HomeSection = async () => {
                   </div>
                 ))}
               </div>
-
-              <div className="w-full overflow-hidden mt-6">
-                <span className="overflow-hidden mx-auto">
-                  <Link
-                    className="sm:h-[55px] sm:w-[220px] sm:rounded-[50px] bg-black text-white relative
-                      flex flex-wrap items-center justify-center tracking-[.5em] text-xs pl-[12px]"
-                    href="/about"
-                  >
-                    ABOUT
-                  </Link>
-                </span>
-              </div>
             </div>
           </div>
         </section>
@@ -144,7 +135,7 @@ export const HomeSection = async () => {
               </p>
             </div>
 
-            <div className="pl-7 pr-16 py-14 sm:-ml-[50px] w-full sm:w-[calc(100%_/_3_+50px)] rounded-[50px] bg-gray z-30">
+            <div className="pl-7 pr-16 py-14 sm:-ml-[50px] w-full sm:w-[calc(100%_/_3_+_50px)] rounded-[50px] bg-gray z-30">
               <h3 className="text-center mb-8">
                 <span className="block text-[24px] tracking-[.2em] mb-4 font-extrabold">
                   [03]
@@ -167,9 +158,9 @@ export const HomeSection = async () => {
               <Link
                 className="sm:h-[55px] sm:w-[220px] sm:rounded-[50px] bg-black text-white relative
                   flex flex-wrap items-center justify-center tracking-[.5em] text-xs pl-[12px]"
-                href="/profile"
+                href="/about"
               >
-                PROFILE
+                ABOUT
               </Link>
             </span>
           </div>
@@ -184,56 +175,132 @@ export const HomeSection = async () => {
           )}
         </section>
 
+        <section className="pt-16 pb-10 -mt-8 mb-10 rounded-tl-[50px] rounded-tr-[50px]">
+          <div className="mx-auto w-[100vw] text-sm overflow-hidden flex flex-wrap items-center justify-end">
+            <h3 className="text-[30px] tracking-[.2em] max-w-[280px] w-1/4 pl-5 relative z-20 font-bold">{data[2]?.title}</h3>
+            {/* <p>{data[2]?.description}</p> */}
 
+            <div className="max-w-[calc(50%_+_750px_/_2_-_80px] w-3/4 relative mb-[50px]">
+              {/* {data[2]?.body?.map((block, index) => (
+                <div key={index}>
+                  {block.children.map((child, childIndex) => (
+                    <p key={childIndex}>{child.text}</p>
+                  ))}
+                </div>
+              ))} */}
+              <Swiper
+                spaceBetween={20}
+                slidesPerView={2.5}
+                onSlideChange={() => console.log('slide change')}
+                onSwiper={(swiper) => console.log(swiper)}
+              >
+                <SwiperSlide>
+                  <div className="relative h-full rounded-[50px] overflow-hidden shadow-lg">
+                    <Link href="/">
+                      <div className="h-[272px] sm:mb-4 overflow-hidden rounded-tl-[50px] rounded-tr-[50px]">
+                        <img
+                          src="/images/news.jpeg"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
 
-        <section className="bg-gray pt-16 pb-10 -mt-8 mb-10 rounded-tl-[50px] rounded-tr-[50px]">
-          <h3>{data[2]?.title}</h3>
-          <p>{data[2]?.description}</p>
+                      <h3 className="sm:mb-[7px] sm:min-h-[44px] leading-[1.5] px-6">テストテストテスト</h3>
+                    </Link>
+                  </div>
+                </SwiperSlide>
 
-          <div className="mt-6">
-            {data[2]?.body?.map((block, index) => (
-              <div key={index}>
-                {block.children.map((child, childIndex) => (
-                  <p key={childIndex}>{child.text}</p>
-                ))}
-              </div>
-            ))}
+                <SwiperSlide>
+                  <div className="relative h-full rounded-[50px] overflow-hidden shadow-lg">
+                    <Link href="/">
+                      <div className="h-[272px] sm:mb-4 overflow-hidden rounded-tl-[50px] rounded-tr-[50px]">
+                        <img
+                          src="/images/news.jpeg"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </Link>
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div className="relative h-full rounded-[50px] overflow-hidden shadow-lg">
+                    <Link href="/">
+                      <div className="h-[272px] sm:mb-4 overflow-hidden rounded-tl-[50px] rounded-tr-[50px]">
+                        <img
+                          src="/images/news.jpeg"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </Link>
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div className="relative h-full rounded-[50px] overflow-hidden shadow-lg">
+                    <Link href="/">
+                      <div className="h-[272px] sm:mb-4 overflow-hidden rounded-tl-[50px] rounded-tr-[50px]">
+                        <img
+                          src="/images/news.jpeg"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </Link>
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div className="relative h-full rounded-[50px] overflow-hidden shadow-lg">
+                    <Link href="/">
+                      <div className="h-[272px] sm:mb-4 overflow-hidden rounded-tl-[50px] rounded-tr-[50px]">
+                        <img
+                          src="/images/news.jpeg"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </Link>
+                  </div>
+                </SwiperSlide>
+
+              </Swiper>
+            </div>
+
+            { data[2]?.image && (
+              <Image
+                src={urlForImage(data[2]?.image)}
+                alt='test'
+                width={100}
+                height={100}
+              />
+            )}
           </div>
-
-          { data[2]?.image && (
-            <Image
-              src={urlForImage(data[2]?.image)}
-              alt='test'
-              width={100}
-              height={100}
-            />
-          )}
         </section>
 
         <section className="my-10 border border-black">
-          <h1>section 4</h1>
-          <h3>{data[3]?.title}</h3>
-          <p>{data[3]?.description}</p>
+          <div className="mx-auto w-[90%] sm:max-w-[900px] text-sm">
+            <h1>section 4</h1>
+            <h3>{data[3]?.title}</h3>
+            <p>{data[3]?.description}</p>
 
-          <div className="mt-6">
-            {data[3]?.body?.map((block, index) => (
-              <div key={index}>
-                {block.children.map((child, childIndex) => (
-                  <p key={childIndex}>{child.text}</p>
-                ))}
-              </div>
-            ))}
+            <div className="mt-6">
+              {data[3]?.body?.map((block, index) => (
+                <div key={index}>
+                  {block.children.map((child, childIndex) => (
+                    <p key={childIndex}>{child.text}</p>
+                  ))}
+                </div>
+              ))}
+            </div>
+
+
+            { data[3]?.image && (
+              <Image
+                src={urlForImage(data[3]?.image)}
+                alt='test'
+                width={100}
+                height={100}
+              />
+            )}
           </div>
-
-
-          { data[3]?.image && (
-            <Image
-              src={urlForImage(data[3]?.image)}
-              alt='test'
-              width={100}
-              height={100}
-            />
-          )}
         </section>
       </div>
     </div>
