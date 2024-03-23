@@ -9,7 +9,10 @@ import Link from 'next/link'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import { Handshake, HeartPulse, Barcode } from 'lucide-react'
+
+import { Navigation } from 'swiper/modules'
 import 'swiper/css'
+//import 'swiper/css/navigation'
 
 interface TopDoc {
   children: {
@@ -189,14 +192,48 @@ export const HomeSection = async () => {
                 </div>
               ))} */}
               <Swiper
+                navigation={true}
+                modules={[Navigation]}
+                // navigation={{
+                //   nextEl: ".swiper-button-next",
+                //   prevEl: ".swiper-button-prev"
+                // }}
+                loop={true}
                 spaceBetween={20}
+                pagination={{ clickable: true }}
                 slidesPerView={2.5}
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiper) => console.log(swiper)}
+                // breakpoints={{
+                //   // when window width is >= 320px
+                //   320: {
+                //     slidesPerView: 1,
+                //     spaceBetween: 24,
+                //   },
+                //   // when window width is >= 480px
+                //   480: {
+                //     slidesPerView: 2,
+                //     spaceBetween: 24,
+                //   },
+                //   // when window width is >= 640px
+                //   640: {
+                //     slidesPerView: 6,
+                //     spaceBetween: 24,
+                //   },
+                //   1024: {
+                //     slidesPerView: 6,
+                //     spaceBetween: 32,
+                //     slidesPerGroup: 1,
+                //   },
+                //   1336: {
+                //     slidesPerView: 6,
+                //     spaceBetween: 32,
+                //   },
+                // }}
               >
-                <SwiperSlide>
+                <SwiperSlide className="sm:!w-[390px]">
                   <div className="relative h-full rounded-[50px] overflow-hidden shadow-lg">
-                    <Link href="/">
+                    <Link href="/" className="block h-full pb-6 bg-white overflow-hidden relative z-10">
                       <div className="h-[272px] sm:mb-4 overflow-hidden rounded-tl-[50px] rounded-tr-[50px]">
                         <img
                           src="/images/news.jpeg"
@@ -205,57 +242,95 @@ export const HomeSection = async () => {
                       </div>
 
                       <h3 className="sm:mb-[7px] sm:min-h-[44px] leading-[1.5] px-6">テストテストテスト</h3>
+
+                      <div className="text-[#BCBCBC] tracking-[.1em] overflow-hidden px-6">
+                        <span>
+                          2024.03.23
+                        </span>
+                      </div>
                     </Link>
                   </div>
                 </SwiperSlide>
 
-                <SwiperSlide>
+                <SwiperSlide className="sm:!w-[390px]">
                   <div className="relative h-full rounded-[50px] overflow-hidden shadow-lg">
-                    <Link href="/">
+                    <Link href="/" className="block h-full pb-6 bg-white overflow-hidden relative z-10">
                       <div className="h-[272px] sm:mb-4 overflow-hidden rounded-tl-[50px] rounded-tr-[50px]">
                         <img
                           src="/images/news.jpeg"
                           className="w-full h-full object-cover"
                         />
                       </div>
+
+                      <h3 className="sm:mb-[7px] sm:min-h-[44px] leading-[1.5] px-6">テストテストテスト</h3>
+
+                      <div className="text-[#BCBCBC] tracking-[.1em] overflow-hidden px-6">
+                        <span>
+                          2024.03.23
+                        </span>
+                      </div>
                     </Link>
                   </div>
                 </SwiperSlide>
 
-                <SwiperSlide>
+                <SwiperSlide className="sm:!w-[390px]">
                   <div className="relative h-full rounded-[50px] overflow-hidden shadow-lg">
-                    <Link href="/">
+                    <Link href="/" className="block h-full pb-6 bg-white overflow-hidden relative z-10">
                       <div className="h-[272px] sm:mb-4 overflow-hidden rounded-tl-[50px] rounded-tr-[50px]">
                         <img
                           src="/images/news.jpeg"
                           className="w-full h-full object-cover"
                         />
                       </div>
+
+                      <h3 className="sm:mb-[7px] sm:min-h-[44px] leading-[1.5] px-6">テストテストテスト</h3>
+
+                      <div className="text-[#BCBCBC] tracking-[.1em] overflow-hidden px-6">
+                        <span>
+                          2024.03.23
+                        </span>
+                      </div>
                     </Link>
                   </div>
                 </SwiperSlide>
 
-                <SwiperSlide>
+                <SwiperSlide className="sm:!w-[390px]">
                   <div className="relative h-full rounded-[50px] overflow-hidden shadow-lg">
-                    <Link href="/">
+                    <Link href="/" className="block h-full pb-6 bg-white overflow-hidden relative z-10">
                       <div className="h-[272px] sm:mb-4 overflow-hidden rounded-tl-[50px] rounded-tr-[50px]">
                         <img
                           src="/images/news.jpeg"
                           className="w-full h-full object-cover"
                         />
                       </div>
+
+                      <h3 className="sm:mb-[7px] sm:min-h-[44px] leading-[1.5] px-6">テストテストテスト</h3>
+
+                      <div className="text-[#BCBCBC] tracking-[.1em] overflow-hidden px-6">
+                        <span>
+                          2024.03.23
+                        </span>
+                      </div>
                     </Link>
                   </div>
                 </SwiperSlide>
 
-                <SwiperSlide>
+                <SwiperSlide className="sm:!w-[390px]">
                   <div className="relative h-full rounded-[50px] overflow-hidden shadow-lg">
-                    <Link href="/">
+                    <Link href="/" className="block h-full pb-6 bg-white overflow-hidden relative z-10">
                       <div className="h-[272px] sm:mb-4 overflow-hidden rounded-tl-[50px] rounded-tr-[50px]">
                         <img
                           src="/images/news.jpeg"
                           className="w-full h-full object-cover"
                         />
+                      </div>
+
+                      <h3 className="sm:mb-[7px] sm:min-h-[44px] leading-[1.5] px-6">テストテストテスト</h3>
+
+                      <div className="text-[#BCBCBC] tracking-[.1em] overflow-hidden px-6">
+                        <span>
+                          2024.03.23
+                        </span>
                       </div>
                     </Link>
                   </div>

@@ -281,3 +281,34 @@ body.loading {
     }
   }
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  cursor: pointer;
+  margin: 0;
+  z-index: 30;
+  left: auto;
+  width: 50px;
+  height: 50px;
+  background-size: 50px 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.swiper-button-prev {
+  left: 10px;
+  right: auto;
+  background-image: url(/images/prev.png);
+}
+
+.swiper-button-next {
+  right: 10px;
+  left: auto;
+  background-image: url(/images/next.png);
+}
+
