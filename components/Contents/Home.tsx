@@ -1,18 +1,15 @@
-'use client'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { groq } from 'next-sanity'
 import { client } from '@/sanity/lib/client'
 import { urlForImage } from '@/sanity/lib/image'
 import { ModelBrand } from '@/components/model/ModelBrand'
-import Link from 'next/link'
-import { Swiper, SwiperSlide } from 'swiper/react'
 
 import { Handshake, HeartPulse, Barcode } from 'lucide-react'
+import { SwiperNewsWrap } from '../swiper/SwiperNewsWrap'
+import { SwiperServiceWrap } from '../swiper/SwiperServiceWrap'
 
-import { Navigation } from 'swiper/modules'
-import 'swiper/css'
-//import 'swiper/css/navigation'
 
 interface TopDoc {
   children: {
@@ -37,6 +34,40 @@ const query = groq`
     body
   } | order(order asc)
 `
+
+const slides = [
+  {
+    imgSrc: '/images/news.jpeg',
+    link: '/article/1',
+    title: '記事タイトル1',
+    date: '2024.03.21',
+  },
+  {
+    imgSrc: '/images/news.jpeg',
+    link: '/article/2',
+    title: '記事タイトル2',
+    date: '2024.03.22',
+  },
+  {
+    imgSrc: '/images/news.jpeg',
+    link: '/article/3',
+    title: '記事タイトル3',
+    date: '2024.03.23',
+  },
+  {
+    imgSrc: '/images/news.jpeg',
+    link: '/article/3',
+    title: '記事タイトル3',
+    date: '2024.03.23',
+  },
+  {
+    imgSrc: '/images/news.jpeg',
+    link: '/article/3',
+    title: '記事タイトル3',
+    date: '2024.03.23',
+  },
+];
+
 
 export const HomeSection = async () => {
   const data: Top[] = await client.fetch(query)
@@ -178,205 +209,81 @@ export const HomeSection = async () => {
           )}
         </section>
 
-        <section className="pt-16 pb-10 -mt-8 mb-10 rounded-tl-[50px] rounded-tr-[50px]">
-          <div className="mx-auto w-[100vw] text-sm overflow-hidden flex flex-wrap items-center justify-end">
-            <h3 className="text-[30px] tracking-[.2em] max-w-[280px] w-1/4 pl-5 relative z-20 font-bold">{data[2]?.title}</h3>
-            {/* <p>{data[2]?.description}</p> */}
+        <section className="relative mx-auto w-[100vw] text-sm overflow-hidden flex flex-wrap items-center justify-end">
+          <h3 className="text-[30px] tracking-[.2em] max-w-[280px] w-1/4 pl-5 relative z-20 font-bold">{data[2]?.title}</h3>
+          {/* <p>{data[2]?.description}</p> */}
 
-            <div className="max-w-[calc(50%_+_750px_/_2_-_80px] w-3/4 relative mb-[50px]">
-              {/* {data[2]?.body?.map((block, index) => (
-                <div key={index}>
-                  {block.children.map((child, childIndex) => (
-                    <p key={childIndex}>{child.text}</p>
-                  ))}
-                </div>
-              ))} */}
-              <Swiper
-                navigation={true}
-                modules={[Navigation]}
-                // navigation={{
-                //   nextEl: ".swiper-button-next",
-                //   prevEl: ".swiper-button-prev"
-                // }}
-                loop={true}
-                spaceBetween={20}
-                pagination={{ clickable: true }}
-                slidesPerView={2.5}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
-                // breakpoints={{
-                //   // when window width is >= 320px
-                //   320: {
-                //     slidesPerView: 1,
-                //     spaceBetween: 24,
-                //   },
-                //   // when window width is >= 480px
-                //   480: {
-                //     slidesPerView: 2,
-                //     spaceBetween: 24,
-                //   },
-                //   // when window width is >= 640px
-                //   640: {
-                //     slidesPerView: 6,
-                //     spaceBetween: 24,
-                //   },
-                //   1024: {
-                //     slidesPerView: 6,
-                //     spaceBetween: 32,
-                //     slidesPerGroup: 1,
-                //   },
-                //   1336: {
-                //     slidesPerView: 6,
-                //     spaceBetween: 32,
-                //   },
-                // }}
+          <div
+            className="max-w-[calc(50%_+_750px_/_2_-_80px] w-3/4 relative mb-[50px] after:bg-[#F2F2F2] after:w-[calc(100%_+_80px)]
+              after:h-[180px] after:absolute after:right-0 after:-bottom-[50px] after:rounded-tl-[50px] after:rounded-bl-[50px]"
+          >
+            {/* {data[2]?.body?.map((block, index) => (
+              <div key={index}>
+                {block.children.map((child, childIndex) => (
+                  <p key={childIndex}>{child.text}</p>
+                ))}
+              </div>
+            ))} */}
+            <SwiperNewsWrap slides={slides} />
+          </div>
+
+          <div className="w-[220px] mx-auto overflow-hidden mt-6">
+            <span className="overflow-hidden mx-auto">
+              <Link
+                className="sm:h-[55px] sm:w-[220px] sm:rounded-[50px] bg-black text-white relative
+                  flex flex-wrap items-center justify-center tracking-[.5em] text-xs pl-[12px]"
+                href="/news"
               >
-                <SwiperSlide className="sm:!w-[390px]">
-                  <div className="relative h-full rounded-[50px] overflow-hidden shadow-lg">
-                    <Link href="/" className="block h-full pb-6 bg-white overflow-hidden relative z-10">
-                      <div className="h-[272px] sm:mb-4 overflow-hidden rounded-tl-[50px] rounded-tr-[50px]">
-                        <img
-                          src="/images/news.jpeg"
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-
-                      <h3 className="sm:mb-[7px] sm:min-h-[44px] leading-[1.5] px-6">テストテストテスト</h3>
-
-                      <div className="text-[#BCBCBC] tracking-[.1em] overflow-hidden px-6">
-                        <span>
-                          2024.03.23
-                        </span>
-                      </div>
-                    </Link>
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide className="sm:!w-[390px]">
-                  <div className="relative h-full rounded-[50px] overflow-hidden shadow-lg">
-                    <Link href="/" className="block h-full pb-6 bg-white overflow-hidden relative z-10">
-                      <div className="h-[272px] sm:mb-4 overflow-hidden rounded-tl-[50px] rounded-tr-[50px]">
-                        <img
-                          src="/images/news.jpeg"
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-
-                      <h3 className="sm:mb-[7px] sm:min-h-[44px] leading-[1.5] px-6">テストテストテスト</h3>
-
-                      <div className="text-[#BCBCBC] tracking-[.1em] overflow-hidden px-6">
-                        <span>
-                          2024.03.23
-                        </span>
-                      </div>
-                    </Link>
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide className="sm:!w-[390px]">
-                  <div className="relative h-full rounded-[50px] overflow-hidden shadow-lg">
-                    <Link href="/" className="block h-full pb-6 bg-white overflow-hidden relative z-10">
-                      <div className="h-[272px] sm:mb-4 overflow-hidden rounded-tl-[50px] rounded-tr-[50px]">
-                        <img
-                          src="/images/news.jpeg"
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-
-                      <h3 className="sm:mb-[7px] sm:min-h-[44px] leading-[1.5] px-6">テストテストテスト</h3>
-
-                      <div className="text-[#BCBCBC] tracking-[.1em] overflow-hidden px-6">
-                        <span>
-                          2024.03.23
-                        </span>
-                      </div>
-                    </Link>
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide className="sm:!w-[390px]">
-                  <div className="relative h-full rounded-[50px] overflow-hidden shadow-lg">
-                    <Link href="/" className="block h-full pb-6 bg-white overflow-hidden relative z-10">
-                      <div className="h-[272px] sm:mb-4 overflow-hidden rounded-tl-[50px] rounded-tr-[50px]">
-                        <img
-                          src="/images/news.jpeg"
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-
-                      <h3 className="sm:mb-[7px] sm:min-h-[44px] leading-[1.5] px-6">テストテストテスト</h3>
-
-                      <div className="text-[#BCBCBC] tracking-[.1em] overflow-hidden px-6">
-                        <span>
-                          2024.03.23
-                        </span>
-                      </div>
-                    </Link>
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide className="sm:!w-[390px]">
-                  <div className="relative h-full rounded-[50px] overflow-hidden shadow-lg">
-                    <Link href="/" className="block h-full pb-6 bg-white overflow-hidden relative z-10">
-                      <div className="h-[272px] sm:mb-4 overflow-hidden rounded-tl-[50px] rounded-tr-[50px]">
-                        <img
-                          src="/images/news.jpeg"
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-
-                      <h3 className="sm:mb-[7px] sm:min-h-[44px] leading-[1.5] px-6">テストテストテスト</h3>
-
-                      <div className="text-[#BCBCBC] tracking-[.1em] overflow-hidden px-6">
-                        <span>
-                          2024.03.23
-                        </span>
-                      </div>
-                    </Link>
-                  </div>
-                </SwiperSlide>
-
-              </Swiper>
-            </div>
-
-            { data[2]?.image && (
-              <Image
-                src={urlForImage(data[2]?.image)}
-                alt='test'
-                width={100}
-                height={100}
-              />
-            )}
+                NEWS
+              </Link>
+            </span>
           </div>
         </section>
 
-        <section className="my-10 border border-black">
-          <div className="mx-auto w-[90%] sm:max-w-[900px] text-sm">
-            <h1>section 4</h1>
-            <h3>{data[3]?.title}</h3>
-            <p>{data[3]?.description}</p>
+        <section className="relative my-20 mx-auto w-[100vw] text-sm overflow-hidden flex flex-wrap items-center justify-end">
+          <h3 className="text-[30px] tracking-[.2em] max-w-[280px] w-1/4 pl-5 relative z-20 font-bold">品牌</h3>
+          <div
+            className="max-w-[calc(50%_+_750px_/_2_-_80px] w-3/4 relative mb-[50px] after:bg-[#F2F2F2] after:w-[calc(100%_+_80px)]
+              after:h-[180px] after:absolute after:right-0 after:-bottom-[50px] after:rounded-tl-[50px] after:rounded-bl-[50px]"
+          >
+            <SwiperServiceWrap slides={slides} />
+          </div>
 
-            <div className="mt-6">
-              {data[3]?.body?.map((block, index) => (
-                <div key={index}>
-                  {block.children.map((child, childIndex) => (
-                    <p key={childIndex}>{child.text}</p>
-                  ))}
-                </div>
-              ))}
-            </div>
-
-
-            { data[3]?.image && (
-              <Image
-                src={urlForImage(data[3]?.image)}
-                alt='test'
-                width={100}
-                height={100}
-              />
-            )}
+          <div className="w-[220px] mx-auto overflow-hidden mt-6">
+            <span className="overflow-hidden mx-auto">
+              <Link
+                className="sm:h-[55px] sm:w-[220px] sm:rounded-[50px] bg-black text-white relative
+                  flex flex-wrap items-center justify-center tracking-[.5em] text-xs pl-[12px]"
+                href="/news"
+              >
+                SERVICE
+              </Link>
+            </span>
           </div>
         </section>
+
+        <section>
+          <div className="max-w-[750px] w-full mx-auto mb-[60px] sm:mb-[120px] rounded-[40px] sm:rounded-[50px] py-[40px]
+            sm:py-[50px] px-[30px] sm:px-[55px] bg-gray">
+            <h3 className="text-[30px] font-bold text-center mb-[20px] sm:mb-[40px] w-full tracking-[.2em] leading-[1]">聯繫我們</h3>
+            <p className="font-semibold mb-[25px] sm:mb-[30px] tracking-wide leading-[2] sm:leading-[2.5]">
+              哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍
+            </p>
+
+            <div className="w-[220px] mx-auto overflow-hidden mt-6">
+              <span className="overflow-hidden mx-auto">
+                <Link
+                  className="sm:h-[55px] sm:w-[220px] sm:rounded-[50px] bg-black text-white relative
+                    flex flex-wrap items-center justify-center tracking-[.5em] text-xs pl-[12px]"
+                  href="/news"
+                >
+                  CONTACT
+                </Link>
+              </span>
+            </div>
+          </div>
+        </section>
+
       </div>
     </div>
   )
