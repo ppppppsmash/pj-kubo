@@ -272,7 +272,6 @@ body.loading {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-    z-index: 100;
 
     img {
       width: 100%;

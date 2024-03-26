@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from 'react'
 import { usePathname } from 'next/navigation'
 import * as React from "react"
 import Link from "next/link"
@@ -57,7 +58,17 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function Header() {
   const pathname = usePathname()
-  console.log(pathname)
+  
+  const [isOpen, setIsOpen] = useState(false)
+  const [isClose, setIsClose] = useState(true)
+
+  const handleClick = () => {
+    setIsOpen(!isOpen)
+  }
+
+  const handleCloseClick = () => {
+    setIsOpen(false)
+  }
 
   return (
     <div>
@@ -65,7 +76,7 @@ export function Header() {
         <div className="flex items-center pt-3.5 ml-6">
           <Logo />
 
-          <NavigationMenu>
+          <NavigationMenu className="sm:block hidden">
             <NavigationMenuList>
               <NavigationMenuItem>
                 <Link href="/" legacyBehavior passHref>
@@ -142,6 +153,50 @@ export function Header() {
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
+
+          <div
+            className="sm:hidden block bg-white fixed top-5 right-6 rounded-md w-10 h-10 cursor-pointer z-[9999] text-center"
+            onClick={handleClick}
+          >
+            <span
+              className={cn("relative bg-black w-5 h-[2px] inline-block mt-[18px] transition-all duration-150",
+                "before:absolute before:-top-2 before:left-0 before:transition-all before:inline-block before:w-5 before:h-[2px] before:bg-black",
+                "after:absolute after:top-2 after:left-0 after:transition-all after:inline-block after:w-5 after:h-[2px] after:bg-black",
+                isOpen ? "bg-transparent inline-block mt-[18px] transition-all duration-150 before:top-0 before:rotate-[135deg] after:top-0 after:rotate-[-135deg]" : ""
+              )}
+            ></span>
+          </div>
+
+          <div className={cn(
+            "fixed top-4 right-5 rounded-[50%] h-[100px] w-[100px] cursor-pointer z-[9998] text-center scale-0 bg-white transition-all duration-700",
+            isOpen ? "scale-[80]" : "",
+            isClose ? "" : "scalse-[80]"
+            )}
+          />
+
+          <nav className={cn(
+            "h-[100vh] sm:h-auto fixed sm:hidden top-0 right-0 z-[9998] w-full transition-all duration-500",
+            isOpen ? "opacity-1" : "opacity-0"
+            )}
+          >
+            <ul className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-full">
+              <li className="text-[40px] no-underline text-black px-4 py-8 transition-all duration-300 cursor-pointer">
+                <Link href="/" onClick={handleCloseClick}>HOME</Link>
+              </li>
+              <li className="text-[40px] no-underline text-black px-4 py-8 transition-all duration-300 cursor-pointer">
+                <Link href="/about" onClick={handleCloseClick}>ABOUT</Link>
+              </li>
+              <li className="text-[40px] no-underline text-black px-4 py-8 transition-all duration-300 cursor-pointer">
+                <Link href="/news" onClick={handleCloseClick}>NEWS</Link>
+              </li>
+              <li className="text-[40px] no-underline text-black px-4 py-8 transition-all duration-300 cursor-pointer">
+                <Link href="/service" onClick={handleCloseClick}>SERVICE</Link>
+              </li>
+              <li className="text-[40px] no-underline text-black px-4 py-8 transition-all duration-300 cursor-pointer">
+                <Link href="/contact" onClick={handleCloseClick}>CONTACT</Link>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </div>
