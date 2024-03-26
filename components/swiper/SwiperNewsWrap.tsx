@@ -63,7 +63,7 @@ export const SwiperNewsWrap = ({ slides }: Slides) => {
               <div className="h-[272px] sm:mb-4 overflow-hidden rounded-tl-[50px] rounded-tr-[50px]">
                 <img
                   src={slide.imgSrc}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover duration-300 hover:scale-[1.2]"
                 />
               </div>
 

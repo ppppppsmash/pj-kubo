@@ -1,5 +1,6 @@
 "use client"
 
+import { usePathname } from 'next/navigation'
 import * as React from "react"
 import Link from "next/link"
 
@@ -55,6 +56,9 @@ const components: { title: string; href: string; description: string }[] = [
 ]
 
 export function Header() {
+  const pathname = usePathname()
+  console.log(pathname)
+
   return (
     <div>
       <div className="fixed z-40 top-0 left-0 max-w-[1580px] w-[calc(100vw)] h-[70px]">
@@ -65,7 +69,8 @@ export function Header() {
             <NavigationMenuList>
               <NavigationMenuItem>
                 <Link href="/" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  <NavigationMenuLink className={cn(navigationMenuTriggerStyle(),
+                    pathname === "/" ? "after:scale-x-100 after:scale-y-100" : "")}>
                     HOME
                   </NavigationMenuLink>
                 </Link>
@@ -73,15 +78,17 @@ export function Header() {
 
               <NavigationMenuItem>
                 <Link href="/about" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  <NavigationMenuLink className={cn(navigationMenuTriggerStyle(),
+                    pathname === "/about" ? "after:scale-x-100 after:scale-y-100" : "")}>
                     ABOUT
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <Link href="/profile" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                <Link href="/news" legacyBehavior passHref>
+                  <NavigationMenuLink className={cn(navigationMenuTriggerStyle(),
+                    pathname === "/news" ? "after:scale-x-100 after:scale-y-100" : "")}>
                     NEWS
                   </NavigationMenuLink>
                 </Link>
@@ -122,7 +129,8 @@ export function Header() {
 
               <NavigationMenuItem>
                 <Link href="/contact" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  <NavigationMenuLink className={cn(navigationMenuTriggerStyle(),
+                    pathname === "/contact" ? "after:scale-x-100 after:scale-y-100" : "")}>
                     CONTACT
                   </NavigationMenuLink>
                 </Link>
