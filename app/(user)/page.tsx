@@ -1,4 +1,3 @@
-
 import { HomeSection } from '@/components/Contents/Home'
 import MotionAnimate from '@/components/Motion/MotionAnimate'
 import { Hero } from '@/components/Hero'
