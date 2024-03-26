@@ -95,7 +95,12 @@ export function Header() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger>SERVICE</NavigationMenuTrigger>
+                <Link href="/service" legacyBehavior passHref>
+                  <NavigationMenuLink className={cn(navigationMenuTriggerStyle(),
+                        pathname === "/service" ? "after:scale-x-100 after:scale-y-100" : "")}>
+                    <NavigationMenuTrigger>SERVICE</NavigationMenuTrigger>
+                  </NavigationMenuLink>
+                </Link>
                 <NavigationMenuContent>
                   <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                     <li className="row-span-3">
