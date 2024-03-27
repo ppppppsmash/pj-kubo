@@ -23,7 +23,7 @@ export default async function Contact() {
         </div>
       </section>
 
-      <div className="bg-white -mt-[30px] rounded-tl-[50px] rounded-rl-[50px] py-16">
+      <div className="bg-white -mt-[30px] rounded-tl-[50px] rounded-tr-[50px] py-16">
         <div className="max-w-[750px] w-[calc(100%_-_50px)] mx-auto">
           <ContactForm />
         </div>
