@@ -24,7 +24,7 @@ export function ModelBrand() {
   }, []);
 
   return (
-    <section className="">
+    <section className="relative">
       <>
         {isHydrated && (
           <Suspense>

@@ -71,12 +71,13 @@ export function Header() {
   }
 
   return (
-    <div>
-      <div className="fixed z-40 top-0 left-0 max-w-[1580px] w-[calc(100vw)] h-[70px]">
-        <div className="flex items-center pt-3.5 ml-6">
+    <div className="sm:shadow-sm">
+      <div className="relative bg-white z-40 top-0 left-0 max-w-[1580px] w-[calc(100vw)] h-[150px]">
+        {/* <div className="flex items-center pt-3.5 ml-6"> */}
+        <div className="w-full mx-auto">
           <Logo />
 
-          <NavigationMenu className="sm:block hidden">
+          <NavigationMenu className="sm:flex hidden">
             <NavigationMenuList>
               <NavigationMenuItem>
                 <Link href="/" legacyBehavior passHref>
@@ -110,6 +111,7 @@ export function Header() {
                   <NavigationMenuLink className={cn(navigationMenuTriggerStyle(),
                         pathname === "/service" ? "after:scale-x-100 after:scale-y-100" : "")}>
                     <NavigationMenuTrigger>SERVICE</NavigationMenuTrigger>
+                    {/* navigation-menu: 91 line */}
                   </NavigationMenuLink>
                 </Link>
                 <NavigationMenuContent>

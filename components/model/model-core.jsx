@@ -78,11 +78,13 @@ export const DisplacementSphere = props => {
     }
 
     startTransition(() => {
-      geometry.current = new SphereGeometry(32, 128, 128)
+      geometry.current = new SphereGeometry(22, 64, 128)
       sphere.current = new Mesh(geometry.current, material.current)
       sphere.current.position.z = 0
-      sphere.current.position.x = 22
-      sphere.current.position.y = 15
+      // sphere.current.position.x = 22
+      // sphere.current.position.y = 15
+      sphere.current.position.x = 0
+      sphere.current.position.y = 0
       sphere.current.modifier = Math.random()
       scene.current.add(sphere.current)
     })
@@ -184,13 +186,14 @@ export const DisplacementSphere = props => {
   }, [isInViewport, reduceMotion, rotationX, rotationY])
 
   return (
-    <div className="">
-      {/* {({ visible, nodeRef }) => ( */}
-        <canvas
-          className="absolute sm:inset-0 !w-full -top-1/3"
-          aria-hidden
-          ref={canvasRef}
-        />
+    <div>
+      <div className="absolute top-0 h-full w-full z-[1] opacity-50 bg-black bg-opacity-10" />
+
+      <canvas
+        className="relative sm:inset-0 !w-full top-0"
+        aria-hidden
+        ref={canvasRef}
+      />
       {/* )} */}
     </div>
   )
