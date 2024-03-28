@@ -155,20 +155,21 @@ export function Header() {
           </NavigationMenu>
 
           <div
-            className="sm:hidden block bg-white fixed top-5 right-6 rounded-md w-10 h-10 cursor-pointer z-[9999] text-center"
+            className="sm:hidden block bg-gray fixed top-0 right-0 rounded-md w-16 h-16 cursor-pointer z-[9999] text-center
+              rounded-bl-[25px]"
             onClick={handleClick}
           >
             <span
-              className={cn("relative bg-black w-5 h-[2px] inline-block mt-[18px] transition-all duration-150",
-                "before:absolute before:-top-2 before:left-0 before:transition-all before:inline-block before:w-5 before:h-[2px] before:bg-black",
-                "after:absolute after:top-2 after:left-0 after:transition-all after:inline-block after:w-5 after:h-[2px] after:bg-black",
-                isOpen ? "bg-transparent inline-block mt-[18px] transition-all duration-150 before:top-0 before:rotate-[135deg] after:top-0 after:rotate-[-135deg]" : ""
+              className={cn("relative bg-black w-8 h-[2px] inline-block mt-[30px] transition-all duration-150",
+                "before:absolute before:-top-2 before:left-0 before:transition-all before:inline-block before:w-8 before:h-[2px] before:bg-black",
+                "after:absolute after:top-2 after:left-0 after:transition-all after:inline-block after:w-8 after:h-[2px] after:bg-black",
+                isOpen ? "bg-transparent inline-block mt-[30px] transition-all duration-150 before:top-0 before:rotate-[135deg] after:top-0 after:rotate-[-135deg]" : ""
               )}
             ></span>
           </div>
 
           <div className={cn(
-            "fixed top-4 right-5 rounded-[50%] h-[100px] w-[100px] cursor-pointer z-[9998] text-center scale-0 bg-white transition-all duration-700",
+            "fixed top-0 right-0 rounded-[50%] h-[100px] w-[100px] cursor-pointer z-[9998] text-center scale-0 bg-gray transition-all duration-1000",
             isOpen ? "scale-[80]" : "",
             isClose ? "" : "scalse-[80]"
             )}

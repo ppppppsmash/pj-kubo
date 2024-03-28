@@ -187,7 +187,7 @@ export const DisplacementSphere = props => {
     <div className="">
       {/* {({ visible, nodeRef }) => ( */}
         <canvas
-          className="absolute inset-0 !w-full"
+          className="absolute sm:inset-0 !w-full -top-1/3"
           aria-hidden
           ref={canvasRef}
         />

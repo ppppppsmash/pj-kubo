@@ -31,7 +31,7 @@ export default function MotionAnimate() {
 
       { !loading && (
         <div className="transition-image final absolute flex items-center justify-center top-0 left-0 mt-[80%]
-          sm:mt-[40%] w-[100vw] h-auto"
+          sm:mt-[40%] w-[100vw] h-auto z-50"
         >
           <motion.img
             className="w-[800px] flex"
