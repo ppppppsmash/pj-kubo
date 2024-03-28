@@ -31,7 +31,7 @@ export const SwiperServiceWrap = ({ slides }: Slides) => {
       onSwiper={(swiper) => console.log(swiper)}
     >
       {slides.map((slide, index) => (
-        <SwiperSlide className="sm:!w-[390px] sm:!h-[600px]" key={index}>
+        <SwiperSlide className="!w-[300px] !h-[500px] sm:!w-[390px] sm:!h-[600px]" key={index}>
           <div className="relative h-full rounded-[50px] overflow-hidden shadow-[6px_4px_15px_0_rgba(51,51,51,.19)]">
             <Link href={slide.link} className="block h-full pb-6 bg-white overflow-hidden relative z-10">
               <div className="h-full sm:mb-4 overflow-hidden rounded-[50px]">

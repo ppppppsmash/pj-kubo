@@ -175,11 +175,14 @@ export function Header() {
           />
 
           <nav className={cn(
-            "h-[100vh] sm:h-auto fixed sm:hidden top-0 right-0 z-[9998] w-full transition-all duration-500",
-            isOpen ? "opacity-1" : "opacity-0"
+            "h-[100vh] sm:h-auto fixed sm:hidden top-0 right-0 w-full transition-all duration-500",
+            isOpen ? "opacity-1 z-[9998]" : "opacity-0 hidden"
             )}
           >
-            <ul className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-full">
+            <ul className={cn(
+                "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-full",
+              )}
+            >
               <li className="text-[40px] no-underline text-black px-4 py-8 transition-all duration-300 cursor-pointer">
                 <Link href="/" onClick={handleCloseClick}>HOME</Link>
               </li>

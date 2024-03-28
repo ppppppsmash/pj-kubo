@@ -299,14 +299,17 @@ body.loading {
   -o-transform: translateY(-50%);
 }
 
-.swiper-button-prev {
-  left: 10px;
-  right: auto;
-  background-image: url(/images/prev.png);
-}
 
-.swiper-button-next {
-  right: 10px;
-  left: auto;
-  background-image: url(/images/next.png);
+@media (min-width: 400px) {
+  .swiper-button-prev {
+    left: 10px;
+    right: auto;
+    background-image: url(/images/prev.png);
+  }
+
+  .swiper-button-next {
+    right: 10px;
+    left: auto;
+    background-image: url(/images/next.png);
+  }
 }

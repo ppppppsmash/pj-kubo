@@ -131,7 +131,7 @@ export const HomeSection = async () => {
 
           <div className="block sm:flex mx-auto w-[90%] sm:max-w-[1000px] my-10">
             <div
-              className="pl-7 pr-16 py-14 w-full sm:w-[calc(100%_/_3_+50px)] rounded-[50px] sm:rounded-tl-[50px] sm:rounded-bl-[50px]
+              className="px-7 sm:pl-7 sm:pr-16 py-14 w-full sm:w-[calc(100%_/_3_+50px)] rounded-[50px] sm:rounded-tl-[50px] sm:rounded-bl-[50px]
                 sm:rounded-tr-none sm:rounded-br-none bg-gray z-10"
             >
               <h3 className="text-center mb-8">
@@ -151,7 +151,7 @@ export const HomeSection = async () => {
             </div>
 
             <div
-              className="pl-7 pr-16 py-14 sm:-ml-[50px] w-full sm:w-[calc(100%_/_3_+50px)] rounded-[50px] sm:rounded-tl-[50px] sm:rounded-bl-[50px]
+              className="px-7 sm:pl-7 sm:pr-16 py-14 sm:-ml-[50px] w-full sm:w-[calc(100%_/_3_+50px)] rounded-[50px] sm:rounded-tl-[50px] sm:rounded-bl-[50px]
                 sm:rounded-tr-none sm:rounded-br-none bg-white z-20">
               <h3 className="text-center mb-8">
                 <span className="block text-[24px] tracking-[.2em] mb-4 font-extrabold">
@@ -169,7 +169,7 @@ export const HomeSection = async () => {
               </p>
             </div>
 
-            <div className="pl-7 pr-16 py-14 sm:-ml-[50px] w-full sm:w-[calc(100%_/_3_+_50px)] rounded-[50px] bg-gray z-30">
+            <div className="px-7 py-14 sm:-ml-[50px] w-full sm:w-[calc(100%_/_3_+_50px)] rounded-[50px] bg-gray z-30">
               <h3 className="text-center mb-8">
                 <span className="block text-[24px] tracking-[.2em] mb-4 font-extrabold">
                   [03]
@@ -187,11 +187,12 @@ export const HomeSection = async () => {
             </div>
           </div>
 
-          <div className="w-[220px] mx-auto overflow-hidden mt-6">
-            <span className="overflow-hidden mx-auto">
+          <div className="w-full sm:w-[220px] sm:mx-auto overflow-hidden mt-6 flex justify-end">
+            <span className="block overflow-hidden sm:mx-auto">
               <Link
-                className="sm:h-[55px] sm:w-[220px] sm:rounded-[50px] bg-black text-white relative
-                  flex flex-wrap items-center justify-center tracking-[.5em] text-xs pl-[12px]"
+                className="sm:h-[55px] w-[200px] sm:w-[220px] sm:rounded-[50px] bg-black text-white relative
+                  flex flex-wrap items-center justify-center tracking-[.5em] text-xs pl-[12px]
+                  rounded-tl-[30px] rounded-bl-[30px] h-[55px]"
                 href="/about"
               >
                 ABOUT
@@ -209,13 +210,18 @@ export const HomeSection = async () => {
           )}
         </section>
 
-        <section className="relative mx-auto w-[100vw] text-sm overflow-hidden flex flex-wrap items-center justify-end">
-          <h3 className="text-[30px] tracking-[.2em] max-w-[280px] w-1/4 pl-5 relative z-20 font-bold">{data[2]?.title}</h3>
+        <section
+          className="pt-5 relative mx-auto w-[100vw] text-sm overflow-hidden sm:flex sm:flex-wrap sm:items-center sm:justify-end mb-14"
+        >
+          <h3 className="text-center text-[30px] tracking-[.2em] sm:max-w-[280px] sm:w-1/4 sm:pl-5 relative z-20 font-bold">
+            {data[2]?.title}
+          </h3>
           {/* <p>{data[2]?.description}</p> */}
 
           <div
-            className="max-w-[calc(50%_+_750px_/_2_-_80px] w-3/4 relative mb-[50px] after:bg-[#F2F2F2] after:w-[calc(100%_+_80px)]
-              after:h-[180px] after:absolute after:right-0 after:-bottom-[50px] after:rounded-tl-[50px] after:rounded-bl-[50px]"
+            className="max-w-full w-full pl-5 sm:pl-0 sm:max-w-[calc(50%_+_750px_/_2_-_80px] sm:w-3/4 relative mb-[50px] after:bg-[#F2F2F2] sm:after:w-[calc(100%_+_80px)]
+              after:h-[180px] after:absolute after:right-0 after:-bottom-[30px] sm:after:-bottom-[50px] sm:after:rounded-tl-[50px] sm:after:rounded-bl-[50px]
+              after:w-[calc(100%_-_80px)] after:rounded-tl-[40px] after:rounded-bl-[40px]"
           >
             {/* {data[2]?.body?.map((block, index) => (
               <div key={index}>
@@ -227,11 +233,12 @@ export const HomeSection = async () => {
             <SwiperNewsWrap slides={slides} />
           </div>
 
-          <div className="w-[220px] mx-auto overflow-hidden mt-6">
-            <span className="overflow-hidden mx-auto">
+          <div className="w-full sm:w-[220px] sm:mx-auto overflow-hidden mt-6 flex justify-end">
+            <span className="block overflow-hidden sm:mx-auto">
               <Link
-                className="sm:h-[55px] sm:w-[220px] sm:rounded-[50px] bg-black text-white relative
-                  flex flex-wrap items-center justify-center tracking-[.5em] text-xs pl-[12px]"
+                className="sm:h-[55px] w-[200px] sm:w-[220px] sm:rounded-[50px] bg-black text-white relative
+                  flex flex-wrap items-center justify-center tracking-[.5em] text-xs pl-[12px]
+                  rounded-tl-[30px] rounded-bl-[30px] h-[55px]"
                 href="/news"
               >
                 NEWS
@@ -240,20 +247,26 @@ export const HomeSection = async () => {
           </div>
         </section>
 
-        <section className="relative my-20 mx-auto w-[100vw] text-sm overflow-hidden flex flex-wrap items-center justify-end">
-          <h3 className="text-[30px] tracking-[.2em] max-w-[280px] w-1/4 pl-5 relative z-20 font-bold">品牌</h3>
+        <section
+          className="pt-5 relative mx-auto w-[100vw] text-sm overflow-hidden sm:flex sm:flex-wrap sm:items-center sm:justify-end mb-14"
+        >
+          <h3 className="text-center text-[30px] tracking-[.2em] sm:max-w-[280px] sm:w-1/4 sm:pl-5 relative z-20 font-bold">
+            品牌
+          </h3>
           <div
-            className="max-w-[calc(50%_+_750px_/_2_-_80px] w-3/4 relative mb-[50px] after:bg-[#F2F2F2] after:w-[calc(100%_+_80px)]
-              after:h-[180px] after:absolute after:right-0 after:-bottom-[50px] after:rounded-tl-[50px] after:rounded-bl-[50px]"
+            className="max-w-full w-full pl-5 sm:pl-0 sm:max-w-[calc(50%_+_750px_/_2_-_80px] sm:w-3/4 relative mb-[50px] after:bg-[#F2F2F2] sm:after:w-[calc(100%_+_80px)]
+              after:h-[180px] after:absolute after:right-0 after:-bottom-[30px] sm:after:-bottom-[50px] sm:after:rounded-tl-[50px] sm:after:rounded-bl-[50px]
+              after:w-[calc(100%_-_80px)] after:rounded-tl-[40px] after:rounded-bl-[40px]"
           >
             <SwiperServiceWrap slides={slides} />
           </div>
 
-          <div className="w-[220px] mx-auto overflow-hidden mt-6">
-            <span className="overflow-hidden mx-auto">
+          <div className="w-full sm:w-[220px] sm:mx-auto overflow-hidden mt-6 flex justify-end">
+            <span className="block overflow-hidden sm:mx-auto">
               <Link
-                className="sm:h-[55px] sm:w-[220px] sm:rounded-[50px] bg-black text-white relative
-                  flex flex-wrap items-center justify-center tracking-[.5em] text-xs pl-[12px]"
+                className="sm:h-[55px] w-[200px] sm:w-[220px] sm:rounded-[50px] bg-black text-white relative
+                  flex flex-wrap items-center justify-center tracking-[.5em] text-xs pl-[12px]
+                  rounded-tl-[30px] rounded-bl-[30px] h-[55px]"
                 href="/news"
               >
                 SERVICE
