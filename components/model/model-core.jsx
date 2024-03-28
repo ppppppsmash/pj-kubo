@@ -78,11 +78,9 @@ export const DisplacementSphere = props => {
     }
 
     startTransition(() => {
-      geometry.current = new SphereGeometry(22, 64, 128)
+      geometry.current = new SphereGeometry(24, 64, 128)
       sphere.current = new Mesh(geometry.current, material.current)
       sphere.current.position.z = 0
-      // sphere.current.position.x = 22
-      // sphere.current.position.y = 15
       sphere.current.position.x = 0
       sphere.current.position.y = 0
       sphere.current.modifier = Math.random()
@@ -125,16 +123,16 @@ export const DisplacementSphere = props => {
       renderer.current.render(scene.current, camera.current)
     }
 
-    // if (width <= media.mobile) {
-    //   sphere.current.position.x = 14
-    //   sphere.current.position.y = 10
-    // } else if (width <= media.tablet) {
-    //   sphere.current.position.x = 18
-    //   sphere.current.position.y = 14
-    // } else {
-    //   sphere.current.position.x = 22
-    //   sphere.current.position.y = 16
-    // }
+    if (width <= 640) {
+        sphere.current.position.x = 10
+        sphere.current.position.y = 10
+        sphere.current.position.z = 0
+
+      } else {
+        sphere.current.position.x = 0
+        sphere.current.position.y = 0
+        sphere.current.position.z = 0
+      }
   }, [reduceMotion, windowSize])
 
   useEffect(() => {
@@ -186,15 +184,14 @@ export const DisplacementSphere = props => {
   }, [isInViewport, reduceMotion, rotationX, rotationY])
 
   return (
-    <div>
-      <div className="absolute top-0 h-full w-full z-[1] opacity-50 bg-black bg-opacity-10" />
+    <div className="relative h-[70svh] sm:h-auto overflow-hidden">
+      <div className="absolute top-0 h-full w-full z-[1] opacity-50 bg-black bg-opacity-30" />
 
       <canvas
-        className="relative sm:inset-0 !w-full top-0"
+        className="absolute sm:relative sm:inset-0 !w-full -top-[70%] animate-color-change"
         aria-hidden
         ref={canvasRef}
       />
-      {/* )} */}
     </div>
   )
 }

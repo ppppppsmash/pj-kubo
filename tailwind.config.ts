@@ -83,12 +83,21 @@ const config = {
             transform: "translate3d(-1px, 8px, 0)",
             opacity: "0"
           }
+        },
+        "color-change": {
+          "0%": {
+              background: "#19dcea"
+          },
+          to: {
+              background: "#b22cff"
+          }
         }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "scroll-indicator": "scroll-indicator 2s ease infinite",
+        "color-change": "color-change 4s linear  infinite alternate both"
       },
       typography: {
         DEFAULT: {

@@ -77,7 +77,7 @@ export default async function News() {
         {news_list.map((news, index) => (
           <div
             key={index}
-            className="sm:w-[calc(100%_/_3_-_3%)] w-[calc(100%_/_2_-_2.5%)] mb-8 sm:mb-20 relative h-full rounded-[50px]
+            className="md:w-[calc(100%_/_3_-_3%)] sm:w-[calc(100%_/_2_-_2.5%)] mb-8 sm:mb-20 relative h-full rounded-[50px]
               overflow-hidden shadow-[6px_4px_15px_0_rgba(51,51,51,.19)]"
           >
             <Link href="/" className="block h-full pb-6 bg-white overflow-hidden relative z-10">
