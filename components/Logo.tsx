@@ -1,8 +1,16 @@
 import Link from 'next/link'
+import { cn } from '@/lib/utils'
 
-export function Logo() {
+interface Style {
+  style?: string
+}
+
+export function Logo({ style }: Style ) {
   return (
-    <div className="w-[120px] mx-auto pt-6 mb-4">
+    <div className={cn(
+      "w-[120px] mx-auto pt-6 mb-4",
+      style
+    )}>
       <Link href="/">
         <img
           className="w-full"
