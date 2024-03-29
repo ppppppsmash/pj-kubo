@@ -21,6 +21,10 @@ import { cleanRenderer, cleanScene, removeLights } from '@/lib/utils/three'
 import fragmentShader from './displacement-sphere-fragment.glsl?raw'
 import vertexShader from './displacement-sphere-vertex.glsl?raw'
 
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Parallax } from 'swiper/modules'
+import 'swiper/css'
+
 const springConfig = {
   stiffness: 30,
   damping: 20,
@@ -184,35 +188,40 @@ export const DisplacementSphere = props => {
   }, [isInViewport, reduceMotion, rotationX, rotationY])
 
   return (
-    <div className="relative grid grid-cols-2 h-[100svh] sm:h-auto overflow-hidden">
-      <div className="absolute top-0 h-full w-full z-[1] opacity-20 bg-black bg-opacity-30" />
-
-      <div className="h-[100svh] overflow-hidden">
+    <div className="relative h-[70svh] sm:h-auto overflow-hidden">
+      <div className="absolute top-0 h-full w-full z-[1] opacity-50 bg-black bg-opacity-30" />
+      <Swiper
+        loop={true}
+        parallax={true}
+        modules={[Parallax]}
+        speed={1500}
+        autoplay={{
+          delay: 2000
+        }}
+        onSlideChange={() => console.log('slide change')}
+        onSwiper={(swiper) => console.log(swiper)}
+      >
+      <SwiperSlide>
         <canvas
-          className="sm:absolute !-left-1/2 sm:inset-0 -top-[70%] animate-color-change"
+          data-swiper-parallax-x="10%"
+          className="absolute sm:relative sm:inset-0 !w-full -top-[70%] animate-color-change"
           aria-hidden
           ref={canvasRef}
         />
-      </div>
+      </SwiperSlide>
 
-      <div className="h-[100svh] bg-white overflow-hidden flex flex-col justify-center relative">
-        <div className="pl-[26%] pr-[5%]">
-          <h1 className="font-black text-[32px] leading-[1.2] tracking-wide">久保生医日本製</h1>
-          <p className="mt-4 w-[300px]">久保生医日本製久保生医日本製久保生医日本製久保生医日本製</p>
+      <SwiperSlide>
+        <div data-swiper-parallax-x="70%">
+          <img className="w-full" src="/images/main-visual.jpg" />
         </div>
-      </div>
+      </SwiperSlide>
 
-      <div className="absolute block top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 m-auto w-[340px] h-auto z-10">
-        <div
-          className="relative block overflow-hidden"
-          style={{backfaceVisibility: 'hidden'}}
-        >
-          <img
-            className="object-cover w-full h-auto m-auto z-10 shadow-xl rounded-md"
-            src="/images/image-1.png"
-          />
-        </div>
-      </div>
+      <SwiperSlide>
+        <div data-swiper-parallax-x="90%">
+          <img className="w-full" src="/images/main-visual.jpg" />
+          </div>
+      </SwiperSlide>
+    </Swiper>
     </div>
   )
 }
