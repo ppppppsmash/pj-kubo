@@ -155,7 +155,7 @@ export function ContactForm() {
         <div className="w-[220px] mx-auto overflow-hidden mt-6">
           <span className="overflow-hidden mx-auto">
             <button
-              className="sm:h-[55px] sm:w-[220px] sm:rounded-[50px] bg-black text-white relative
+              className="h-[55px] w-[220px] rounded-[40px] sm:rounded-[50px] bg-black text-white relative
                 flex flex-wrap items-center justify-center tracking-[.5em] text-sm pl-[10px]"
               type="submit"
             >

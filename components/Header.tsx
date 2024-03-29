@@ -72,7 +72,7 @@ export function Header() {
 
   return (
     <div className="sm:shadow-sm">
-      <div className="relative bg-white z-40 top-0 left-0 w-full h-[90px] sm:h-[150px]">
+      <div className="relative bg-white z-40 top-0 left-0 w-full h-[90px] sm:h-[140px]">
         <div className="w-full mx-auto">
           <Logo />
 
@@ -117,7 +117,7 @@ export function Header() {
 
               <NavigationMenuItem>
                 <Link href="/service" legacyBehavior passHref>
-                  <NavigationMenuLink className={cn(navigationMenuTriggerStyle(),
+                  <NavigationMenuLink className={cn(
                         pathname === "/service" ? "after:scale-x-100 after:scale-y-100" : "")}>
                     <NavigationMenuTrigger>SERVICE</NavigationMenuTrigger>
                     {/* navigation-menu: 91 line */}
