@@ -68,7 +68,7 @@ export function ContactForm() {
             <FormItem>
               <FormLabel className="text-[18px]"><strong>姓</strong></FormLabel>
               <FormControl>
-                <Input placeholder="..." {...field} />
+                <Input placeholder="請輸入姓." {...field} />
               </FormControl>
               {/* <FormDescription>
                 This is your public display name.
@@ -85,7 +85,7 @@ export function ContactForm() {
             <FormItem>
               <FormLabel className="text-[18px]"><strong>名</strong></FormLabel>
               <FormControl>
-                <Input placeholder="..." {...field} />
+                <Input placeholder="請輸入名." {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -99,7 +99,7 @@ export function ContactForm() {
             <FormItem>
               <FormLabel className="text-[18px]"><strong>E-mail</strong></FormLabel>
               <FormControl>
-                <Input placeholder="..." {...field} />
+                <Input placeholder="請輸入郵箱." {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -113,7 +113,7 @@ export function ContactForm() {
             <FormItem>
               <FormLabel className="text-[18px]"><strong>電話號碼</strong></FormLabel>
               <FormControl>
-                <Input placeholder="..." {...field} />
+                <Input placeholder="請輸入電話號碼." {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -127,7 +127,7 @@ export function ContactForm() {
             <FormItem>
               <FormLabel className="text-[18px]"><strong>企業名</strong></FormLabel>
               <FormControl>
-                <Input placeholder="..." {...field} />
+                <Input placeholder="請輸入企業名(任意)." {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -141,7 +141,7 @@ export function ContactForm() {
             <FormItem>
               <FormLabel className="text-[18px]"><strong>資訊內容</strong></FormLabel>
               <FormControl>
-                <Textarea className="resize-none" rows={10} placeholder="..." {...field} />
+                <Textarea className="resize-none" rows={10} placeholder="請輸入您想詢問的內容." {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>

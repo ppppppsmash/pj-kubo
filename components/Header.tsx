@@ -77,7 +77,7 @@ export function Header() {
         <div className="w-full mx-auto">
           <Logo />
 
-          <NavigationMenu className="sm:flex hidden">
+          <NavigationMenu className="sm:flex hidden animate-fade-in-bottom duration-500 delay-300">
             <NavigationMenuList>
               <NavigationMenuItem>
                 <Link href="/" legacyBehavior passHref>
@@ -95,6 +95,16 @@ export function Header() {
                     ABOUT
                   </NavigationMenuLink>
                 </Link>
+                {/* <NavigationMenuContent>
+                  <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                    <ListItem href="/message" title="MESSAGE">
+                      MESSAGE
+                    </ListItem>
+                    <ListItem href="/test1" title="Installation">
+                      test test test test test test test test test test test test
+                    </ListItem>
+                  </ul>
+                </NavigationMenuContent> */}
               </NavigationMenuItem>
 
               <NavigationMenuItem>
@@ -178,7 +188,7 @@ export function Header() {
           />
 
           <nav className={cn(
-            "h-[100vh] sm:h-auto fixed sm:hidden top-0 right-0 w-full transition-all duration-500",
+            "h-[100svh] sm:h-auto fixed sm:hidden top-0 right-0 w-full transition-all duration-500",
             isOpen ? "opacity-1 z-[9998]" : "opacity-0 hidden"
             )}
           >
@@ -186,19 +196,19 @@ export function Header() {
                 "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-full",
               )}
             >
-              <li className="text-[40px] no-underline text-black px-4 py-8 transition-all duration-300 cursor-pointer">
+              <li className="text-[30px] no-underline text-black px-4 py-5 transition-all duration-300 cursor-pointer">
                 <Link href="/" onClick={handleCloseClick}>HOME</Link>
               </li>
-              <li className="text-[40px] no-underline text-black px-4 py-8 transition-all duration-300 cursor-pointer">
+              <li className="text-[30px] no-underline text-black px-4 py-5 transition-all duration-300 cursor-pointer">
                 <Link href="/about" onClick={handleCloseClick}>ABOUT</Link>
               </li>
-              <li className="text-[40px] no-underline text-black px-4 py-8 transition-all duration-300 cursor-pointer">
+              <li className="text-[30px] no-underline text-black px-4 py-5 transition-all duration-300 cursor-pointer">
                 <Link href="/news" onClick={handleCloseClick}>NEWS</Link>
               </li>
-              <li className="text-[40px] no-underline text-black px-4 py-8 transition-all duration-300 cursor-pointer">
+              <li className="text-[30px] no-underline text-black px-4 py-5 transition-all duration-300 cursor-pointer">
                 <Link href="/service" onClick={handleCloseClick}>SERVICE</Link>
               </li>
-              <li className="text-[40px] no-underline text-black px-4 py-8 transition-all duration-300 cursor-pointer">
+              <li className="text-[30px] no-underline text-black px-4 py-5 transition-all duration-300 cursor-pointer">
                 <Link href="/contact" onClick={handleCloseClick}>CONTACT</Link>
               </li>
             </ul>

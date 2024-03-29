@@ -6,12 +6,12 @@ export default async function Contact() {
       <section className="pt-[50px] sm:pt-[100px] bg-gray w-[100vw] overflow-hidden pb-20">
         <div className="pt-[60px] px-[10%] max-w-[1600px] mx-auto">
           <h1
-            className="font-bold text-[60px] sm:text-[180px] leading-[50px] sm:leading-[120px] tracking-[.01em] duration-100 delay-100"
+            className="animate-slide-in-left font-black text-[60px] sm:text-[180px] leading-[50px] sm:leading-[120px] tracking-[.01em] duration-500 delay-300"
           >
             CONTACT
           </h1>
 
-          <div className="mt-[80px] mx-auto tracking-wide text-[#545454]">
+          <div className="mt-[80px] mx-auto tracking-wide text-[#545454] animate-fade-in-bottom duration-500 delay-300">
             <p className="mt-[33px] leading-[31px]">
               你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好
             </p>
