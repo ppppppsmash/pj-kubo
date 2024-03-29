@@ -94,16 +94,15 @@ export function Header() {
                     ABOUT
                   </NavigationMenuLink>
                 </Link>
-                {/* <NavigationMenuContent>
-                  <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                    <ListItem href="/message" title="MESSAGE">
-                      MESSAGE
-                    </ListItem>
-                    <ListItem href="/test1" title="Installation">
-                      test test test test test test test test test test test test
-                    </ListItem>
-                  </ul>
-                </NavigationMenuContent> */}
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <Link href="/company" legacyBehavior passHref>
+                  <NavigationMenuLink className={cn(navigationMenuTriggerStyle(),
+                    pathname === "/about" ? "after:scale-x-100 after:scale-y-100" : "")}>
+                    COMPANY
+                  </NavigationMenuLink>
+                </Link>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
@@ -120,7 +119,6 @@ export function Header() {
                   <NavigationMenuLink className={cn(
                         pathname === "/service" ? "after:scale-x-100 after:scale-y-100" : "")}>
                     <NavigationMenuTrigger>SERVICE</NavigationMenuTrigger>
-                    {/* navigation-menu: 91 line */}
                   </NavigationMenuLink>
                 </Link>
                 <NavigationMenuContent>

@@ -184,7 +184,7 @@ export const DisplacementSphere = props => {
   }, [isInViewport, reduceMotion, rotationX, rotationY])
 
   return (
-    <div className="relative h-[70svh] sm:h-auto overflow-hidden">
+    <div className="relative h-[60svh] sm:h-auto overflow-hidden">
       <div className="absolute top-0 h-full w-full z-[1] opacity-50 bg-black bg-opacity-30" />
 
       <canvas
