@@ -20,6 +20,8 @@ import {
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 
+import useSubmitContactForm from '@/hooks/use-submit-contact-form'
+
 const formSchema = z.object({
   familyname: z.string().min(2, {
     message: '姓不能為空喔.',
@@ -42,6 +44,8 @@ const formSchema = z.object({
 })
 
 export function ContactForm() {
+  const { isLoading, submitForm } = useSubmitContactForm()
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -54,8 +58,8 @@ export function ContactForm() {
     },
   })
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values)
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    await submitForm(values)
   }
 
   return (
