@@ -10,6 +10,7 @@ import { Handshake, HeartPulse, Barcode } from 'lucide-react'
 import { SwiperNewsWrap } from '../swiper/SwiperNewsWrap'
 import { SwiperServiceWrap } from '../swiper/SwiperServiceWrap'
 
+import { ArrowRight } from 'lucide-react'
 
 interface TopDoc {
   children: {
@@ -80,7 +81,7 @@ export const HomeSection = async () => {
       {/* <ModelBrand /> */}
 
       <div className="mx-auto w-fit">
-        <h2 className="font-bold text-[30px]">
+        <h2 className="font-bold text-[30px] mb-[180px] sm:mb-0">
           久保生医久保生医久保生医<br />
           久保生医久保生医<br />
           久保生医
@@ -289,26 +290,22 @@ export const HomeSection = async () => {
           </div>
         </section>
 
-        <section className="mt-[120px] px-5 sm:px-0">
-          <div className="max-w-[750px] w-full mx-auto mb-[60px] sm:mb-[120px] rounded-[40px] sm:rounded-[50px] py-[40px]
-            sm:py-[50px] px-[30px] sm:px-[55px] bg-gray">
-            <h3 className="text-[30px] font-bold text-center mb-[20px] sm:mb-[40px] w-full tracking-[.2em] leading-[1]">聯繫我們</h3>
-            <p className="font-semibold mb-[25px] sm:mb-[30px] tracking-wide leading-[2] sm:leading-[2.5]">
-              哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍哈嘍
-            </p>
-
-            <div className="w-[220px] mx-auto overflow-hidden mt-6">
-              <span className="overflow-hidden mx-auto">
-                <Link
-                  className="h-[55px] sm:w-[220px] rounded-[40px] sm:rounded-[50px] bg-black text-white relative
-                    flex flex-wrap items-center justify-center tracking-[.5em] text-xs pl-[12px]"
-                  href="/contact"
-                >
-                  CONTACT
-                </Link>
-              </span>
+        <section className="border-t-[#1F2023] border-t-[1px] mt-[140px] overflow-hidden">
+          <Link
+            className="cursor-pointer text-[#1F2023] transition-all hover:opacity-70 duration-500"
+            href="/contact"
+          >
+            <div className="flex items-center box-border bg-[url('/images/contact.png')] w-full
+              h-[500px] px-[50px] bg-cover transition-all hover:scale-105"
+            >
+              <p className="relative font-black leading-[1] flex items-end">
+                <span className="sm:text-[130px] text-[30px]">Contact Us<br />
+                  <small className="sm:text-[50px] text-[20px]">聯繫我們</small>
+                </span>
+                <ArrowRight className="w-[30px] h-[30px] sm:w-[50px] sm:h-[50px]" />
+              </p>
             </div>
-          </div>
+          </Link>
         </section>
 
       </div>
