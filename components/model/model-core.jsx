@@ -185,7 +185,6 @@ export const DisplacementSphere = props => {
 
   return (
     <div className="relative grid grid-cols-2 h-[100svh] sm:h-auto overflow-hidden">
-      <div className="absolute top-0 h-full w-full z-[1] opacity-20 bg-black bg-opacity-30" />
 
       <div className="h-[100svh] overflow-hidden">
         <canvas
@@ -195,10 +194,27 @@ export const DisplacementSphere = props => {
         />
       </div>
 
-      <div className="h-[100svh] bg-white overflow-hidden flex flex-col justify-center relative">
+      <div className="h-[100svh] bg-white overflow-hidden flex flex-col justify-center relative z-[1]">
         <div className="pl-[26%] pr-[5%]">
-          <h1 className="font-black text-[32px] leading-[1.2] tracking-wide">久保生医日本製</h1>
+          <h1 className="font-black text-[28px] leading-[1.2] tracking-wide">久保生医日本製</h1>
           <p className="mt-4 w-[300px]">久保生医日本製久保生医日本製久保生医日本製久保生医日本製</p>
+        </div>
+
+        <div className="h-[260px] absolute inset-0 m-auto flex justify-start flex-nowrap overflow-hidden -z-[1]">
+          <div className="text-[40px] sm:text-[120px] font-black tracking-[.03em] relative flex-nowrap
+            w-fit whitespace-nowrap animate-endless"
+          >
+            <span className="text-[#E5E7E9] font-normsEn font-bold">
+              KUBO PROJECT{' '}
+            </span>
+          </div>
+          <div className="text-[40px] sm:text-[120px] font-black tracking-[.03em] relative flex-nowrap w-fit
+            whitespace-nowrap animate-endless_2"
+          >
+            <span className="text-[#E5E7E9] font-normsEn font-bold">
+              KUBO PROJECT
+            </span>
+          </div>
         </div>
       </div>
 

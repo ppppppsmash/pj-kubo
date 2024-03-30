@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        normsEn: ['TTNorms']
+      },
       colors: {
         kubo: "#00B9E5",
         gray: "#F2F2F2",
@@ -119,6 +122,22 @@ const config = {
               transform: "translateY(0)",
               opacity: "1"
           }
+        },
+        "endless": {
+          "0%": {
+            transform: "translateX(100%)"
+          },
+          "100%": {
+              transform: "translateX(-100%)"
+          }
+        },
+        "endless_2": {
+          "0%": {
+            transform: "translateX(0%)"
+          },
+          "100%": {
+              transform: "translateX(-200%)"
+          }
         }
       },
       animation: {
@@ -128,7 +147,9 @@ const config = {
         "color-change": "color-change 4s linear  infinite alternate both",
         "slide-in-left": "slide-in-left 1.1s cubic-bezier(0.250, 0.460, 0.450, 0.940)   both",
         "scale-up-center": "scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000)   both",
-        "fade-in-bottom": "fade-in-bottom 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000)   both"
+        "fade-in-bottom": "fade-in-bottom 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000)   both",
+        "endless": "endless 30s -15s linear infinite forwards",
+        "endless_2": "endless_2 30s linear infinite forwards",
       },
       typography: {
         DEFAULT: {
