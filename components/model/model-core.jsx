@@ -21,6 +21,10 @@ import { cleanRenderer, cleanScene, removeLights } from '@/lib/utils/three'
 import fragmentShader from './displacement-sphere-fragment.glsl?raw'
 import vertexShader from './displacement-sphere-vertex.glsl?raw'
 
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Parallax, Autoplay } from 'swiper/modules'
+import 'swiper/css'
+
 const springConfig = {
   stiffness: 30,
   damping: 20,
@@ -28,7 +32,6 @@ const springConfig = {
 }
 
 export const DisplacementSphere = props => {
-  //const { theme } = useTheme()
   const start = useRef(Date.now())
   const canvasRef = useRef()
   const mouse = useRef()
@@ -185,14 +188,54 @@ export const DisplacementSphere = props => {
 
   return (
     <div className="relative grid grid-cols-2 h-[100svh] sm:h-auto overflow-hidden">
+      <Swiper
+        loop={true}
+        parallax={true}
+        modules={[Parallax, Autoplay]}
+        speed={2000}
+        autoplay={{
+          delay: 3000
+        }}
+        onSlideChange={() => console.log('slide change')}
+        onSwiper={(swiper) => console.log(swiper)}
+        className="w-full h-[100svh] overflow-hidden relative"
+      >
+        <SwiperSlide>
+          <div
+            data-swiper-parallax=""
+            className="relative block overflow-hidden pt-[100svh] w-[100vw]"
+          >
+          <canvas
+            className="sm:absolute !-left-1/2 sm:inset-0 -top-[70%] animate-color-change"
+            aria-hidden
+            ref={canvasRef}
+          />
+          </div>
+        </SwiperSlide>
 
-      <div className="h-[100svh] overflow-hidden">
-        <canvas
-          className="sm:absolute !-left-1/2 sm:inset-0 -top-[70%] animate-color-change"
-          aria-hidden
-          ref={canvasRef}
-        />
-      </div>
+        <SwiperSlide>
+          <div
+            data-swiper-parallax=""
+            className="relative block overflow-hidden pt-[100svh] w-[100vw]"
+          >
+            <img
+              className="w-full h-full absolute object-cover inset-0"
+              src="/images/main-visual.jpg" />
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div
+            data-swiper-parallax=""
+            className="relative block overflow-hidden pt-[100svh] w-[100vw]"
+          >
+            <img
+              className="w-full h-full absolute object-cover inset-0"
+              src="/images/main-visual.jpg"
+            />
+          </div>
+        </SwiperSlide>
+      </Swiper>
 
       <div className="h-[100svh] bg-white overflow-hidden flex flex-col justify-center relative z-[1]">
         <div className="pl-[26%] pr-[5%]">

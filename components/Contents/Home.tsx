@@ -75,9 +75,17 @@ export const HomeSection = async () => {
   console.log(data)
 
   return (
-    <div className="pt-[120px] sm:pt-[160px]">
+    <div className="pt-[120px] sm:pt-[100px]">
       {/* 3D Model Layout */}
       {/* <ModelBrand /> */}
+
+      <div className="mx-auto w-fit">
+        <h2 className="font-bold text-[30px]">
+          久保生医久保生医久保生医<br />
+          久保生医久保生医<br />
+          久保生医
+        </h2>
+      </div>
 
       <div>
         {/* ABOUT */}
