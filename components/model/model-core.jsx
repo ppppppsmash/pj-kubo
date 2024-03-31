@@ -220,7 +220,7 @@ export const DisplacementSphere = props => {
           >
             <img
               className="w-full h-full absolute object-cover inset-0"
-              src="/images/main-visual.jpg" />
+              src="/images/mv-01.jpg" />
           </div>
         </SwiperSlide>
 
@@ -231,7 +231,7 @@ export const DisplacementSphere = props => {
           >
             <img
               className="w-full h-full absolute object-cover inset-0"
-              src="/images/main-visual.jpg"
+              src="/images/mv-02.jpg"
             />
           </div>
         </SwiperSlide>
@@ -248,14 +248,14 @@ export const DisplacementSphere = props => {
             w-fit whitespace-nowrap animate-endless"
           >
             <span className="text-[#E5E7E9] font-normsEn font-bold">
-              KUBO PROJECT{' '}
+              Ace Herb Lab. Inc.{' '}
             </span>
           </div>
           <div className="text-[40px] sm:text-[120px] font-black tracking-[.03em] relative flex-nowrap w-fit
             whitespace-nowrap animate-endless_2"
           >
             <span className="text-[#E5E7E9] font-normsEn font-bold">
-              KUBO PROJECT
+              Ace Herb Lab. Inc.
             </span>
           </div>
         </div>
@@ -268,7 +268,7 @@ export const DisplacementSphere = props => {
         >
           <img
             className="object-cover w-full h-auto m-auto z-10 shadow-xl rounded-md"
-            src="/images/image-1.png"
+            src="/images/mv-center.jpg"
           />
         </div>
       </div>

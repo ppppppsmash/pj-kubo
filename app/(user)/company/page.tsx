@@ -1,3 +1,6 @@
+import Link from 'next/link'
+
+import { ArrowRight } from 'lucide-react'
 
 export default async function Company() {
   return (
@@ -12,15 +15,22 @@ export default async function Company() {
 
           <div className="mt-[80px] mx-auto tracking-wide text-[#545454] animate-fade-in-bottom duration-500 delay-300">
             <h3 className="font-semibold leading-[27px] text-[36px]">
-              你好你好你好你好
+              「企業使命」
             </h3>
 
             <p className="mt-[33px] leading-[31px]">
-              你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好
+            久保生医創立初衷 投資美麗 加碼健康
+接軌世界頂尖研究 展現日本國原料、技術美好
+
+久保生医的使命在於投資美麗，加碼健康。
+因此我們從日本國出發，每個環節皆秉持職人精神，從原料產地、實驗室分析、品質把關，我們堅信日本嚴謹的規格與制度，能帶給我們真正美麗與健康的生活。
             </p>
 
             <p className="mt-[33px] leading-[31px]">
-              你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好
+            這不僅是我們對品質的嚴格要求，更是對消費者健康和美麗的責任擔當。我們深知，只有通過最優質的原料和最嚴格的生產標準，才能為客戶提供真正的安心與信賴。
+            隨著科技與技術不斷進步，我們將無時無刻抓緊創新之路，研究精神不停歇，持續改進產品品質，接軌世界頂尖研究，最終從嚴謹的日本實驗室、優質的日本當地原料，作爲國際級的健康研究整合，隨時都是業界領頭。
+            我們將秉承著“投資美麗，加碼健康”的初心，為客戶提供更多元化、更高品質、雙效果的產品和服務。與此同時，我們也將不遺餘力地致力於社會責任的履行，為社會貢獻一份力量。
+            久保生医，堅守初心，不斷前行。我們期待與您一同，共創美麗與健康的未來。
             </p>
           </div>
         </div>
@@ -51,7 +61,7 @@ export default async function Company() {
 
             <dt className="w-1/4 border-b border-b-[#6B6B6B] flex items-center">所屬團體</dt>
             <dd className="w-3/4 border-b border-b-[#6B6B6B] p-[36px]">日本乳酸菌学会 賛助会員</dd>
-
+  
             <dt className="w-1/4 border-b border-b-[#6B6B6B] flex items-center">許可証</dt>
             <dd className="w-3/4 border-b border-b-[#6B6B6B] p-[36px]">
               化粧品製造業許可証<br />
@@ -59,6 +69,24 @@ export default async function Company() {
             </dd>
           </dl>
         </div>
+      </section>
+
+      <section className="border-t-[#1F2023] border-t-[1px] mt-[140px] overflow-hidden">
+        <Link
+          className="cursor-pointer text-[#1F2023] transition-all hover:opacity-70 duration-500"
+          href="/contact"
+        >
+          <div className="flex items-center box-border bg-[url('/images/contact.png')] w-full
+            h-[500px] px-[50px] bg-cover transition-all hover:scale-105"
+          >
+            <p className="relative font-black leading-[1] flex items-end">
+              <span className="sm:text-[130px] text-[30px]">Contact Us<br />
+                <small className="sm:text-[50px] text-[20px]">聯繫我們</small>
+              </span>
+              <ArrowRight className="w-[30px] h-[30px] sm:w-[50px] sm:h-[50px]" />
+            </p>
+          </div>
+        </Link>
       </section>
     </div>
   )

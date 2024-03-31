@@ -80,45 +80,59 @@ export const HomeSection = async () => {
       {/* 3D Model Layout */}
       {/* <ModelBrand /> */}
 
-      <div className="mx-auto w-fit">
-        <h2 className="font-bold text-[30px] mb-[180px] sm:mb-0">
-          久保生医久保生医久保生医<br />
-          久保生医久保生医<br />
-          久保生医
-        </h2>
-      </div>
-
       <div>
         {/* ABOUT */}
-        <section className="bg-gray pt-12 pb-20 mx-auto mt-10 px-5 sm:px-0">
-          {/* <div className="max-w-[900px] w-full mx-auto grid grid-cols-3"> */}
-          <div className="max-w-[1000px] w-full mx-auto sm:flex justify-between relative">
-            <div className="absolute sm:relative sm:inset-0 right-3 -top-8 z-10 w-[180px] sm:w-[320px] sm:mr-24 -mt-[160px] overflow-hidden">
-              { data[0]?.image && (
-                <Image
-                  src={urlForImage(data[0]?.image)}
-                  alt='ABOUT'
-                  className="w-full rounded-[50px] shadow-md"
-                  width={100}
-                  height={100}
-                />
-              )}
-            </div>
+        <section className="pt-12">
+          <h2 className="font-normsEn leading-[0.6] text-center text-[3.1em] sm:text-[12.2em] tracking-[-.04em]">Ace Herb Lab. Inc.</h2>
 
-            <div className="col-span-2 flex flex-col justify-around">
-              <h3 className="text-xl font-bold tracking-[.2em] mb-5">{data[0]?.title}</h3>
-              <p className="text-sm tracking-widest">{data[0]?.description}</p>
-
-              <div className="mt-6 text-sm leading-6 tracking-widest">
-                {data[0]?.body.map((block, index) => (
-                  <div key={index}>
-                    {block.children.map((area, childIndex) => (
-                      <p key={childIndex}>{area.text}</p>
-                    ))}
-                  </div>
-                ))}
-              </div>
+          <div className="relative">
+            <div className="relative overflow-hidden pt-[80%] sm:pt-[36%]">
+              <img
+                className="absolute inset-0 m-auto w-full h-full object-cover"
+                src="/images/about.jpg"
+                alt=""
+              />
             </div>
+            <Link
+              className="bg-black bg-opacity-70 absolute inset-0 py-8 sm:py-12 px-4 sm:px-16 flex flex-wrap justify-between"
+              href="/about"
+            >
+              <span className="font-normsEn block w-full text-[34px] sm:text-[80px] leading-[1] text-white">ABOUT US.</span>
+              <p className="mt-auto w-full block sm:flex flex-wrap justify-between text-white tracking-widest">
+                <span className="w-[46%] text-lg">
+                  關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們
+                </span>
+                
+                <span className="block text-right">
+                  →
+                </span>
+              </p>
+            </Link>
+          </div>
+
+          <div className="relative">
+            <div className="relative overflow-hidden pt-[80%] sm:pt-[36%]">
+              <img
+                className="absolute inset-0 m-auto w-full h-full object-cover"
+                src="/images/company.jpg"
+                alt=""
+              />
+            </div>
+            <Link
+              className="bg-black bg-opacity-70 absolute inset-0 py-8 sm:py-12 px-4 sm:px-16 flex flex-wrap justify-between"
+              href="/company"
+            >
+              <span className="font-normsEn block w-full text-[34px] sm:text-[80px] leading-[1] text-white">COMPANY.</span>
+              <p className="mt-auto w-full block sm:flex flex-wrap justify-between text-white tracking-widest">
+                <span className="w-[46%] text-lg">
+                  公司公司公司公司公司公司公司公司公司公司公司公司公司公司公司公司公司公司公司公司公司公司公司公司
+                </span>
+                
+                <span className="block text-right">
+                  →
+                </span>
+              </p>
+            </Link>
           </div>
         </section>
 
