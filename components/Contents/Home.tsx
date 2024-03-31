@@ -307,7 +307,6 @@ export const HomeSection = async () => {
             </div>
           </Link>
         </section>
-
       </div>
     </div>
   )
