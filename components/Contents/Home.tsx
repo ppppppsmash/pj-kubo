@@ -9,8 +9,7 @@ import { ModelBrand } from '@/components/model/ModelBrand'
 import { Handshake, HeartPulse, Barcode } from 'lucide-react'
 import { SwiperNewsWrap } from '../swiper/SwiperNewsWrap'
 import { SwiperServiceWrap } from '../swiper/SwiperServiceWrap'
-
-import { ArrowRight } from 'lucide-react'
+import { ContactCard } from '../ContactCard'
 
 interface TopDoc {
   children: {
@@ -97,7 +96,10 @@ export const HomeSection = async () => {
               className="bg-black bg-opacity-70 absolute inset-0 py-8 sm:py-12 px-4 sm:px-16 flex flex-wrap justify-between"
               href="/about"
             >
-              <span className="font-normsEn block w-full text-[34px] sm:text-[80px] leading-[1] text-white">ABOUT US.</span>
+              <p className="text-white">
+                <span className="font-normsEn block w-full text-[34px] sm:text-[80px] leading-[1]">ABOUT US<strong className="text-blue-400 text-[20px] pl-2">■</strong></span>
+                <span className="text-[24px] sm:text-[34px] tracking-wide">關於我們</span>
+              </p>
               <p className="mt-auto w-full block sm:flex flex-wrap justify-between text-white tracking-widest">
                 <span className="w-[46%] text-lg">
                   關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們
@@ -122,7 +124,10 @@ export const HomeSection = async () => {
               className="bg-black bg-opacity-70 absolute inset-0 py-8 sm:py-12 px-4 sm:px-16 flex flex-wrap justify-between"
               href="/company"
             >
-              <span className="font-normsEn block w-full text-[34px] sm:text-[80px] leading-[1] text-white">COMPANY.</span>
+              <p className="text-white">
+                <span className="font-normsEn block w-full text-[34px] sm:text-[80px] leading-[1]">COMPANY<strong className="text-blue-400 text-[20px] pl-2">■</strong></span>
+                <span className="text-[24px] sm:text-[34px] tracking-wide">企業簡介</span>
+              </p>
               <p className="mt-auto w-full block sm:flex flex-wrap justify-between text-white tracking-widest">
                 <span className="w-[46%] text-lg">
                   公司公司公司公司公司公司公司公司公司公司公司公司公司公司公司公司公司公司公司公司公司公司公司公司
@@ -304,23 +309,7 @@ export const HomeSection = async () => {
           </div>
         </section>
 
-        <section className="border-t-[#1F2023] border-t-[1px] mt-[140px] overflow-hidden">
-          <Link
-            className="cursor-pointer text-[#1F2023] transition-all hover:opacity-70 duration-500"
-            href="/contact"
-          >
-            <div className="flex items-center box-border bg-[url('/images/contact.png')] w-full
-              h-[500px] px-[50px] bg-cover transition-all hover:scale-105"
-            >
-              <p className="relative font-black leading-[1] flex items-end">
-                <span className="sm:text-[130px] text-[30px]">Contact Us<br />
-                  <small className="sm:text-[50px] text-[20px]">聯繫我們</small>
-                </span>
-                <ArrowRight className="w-[30px] h-[30px] sm:w-[50px] sm:h-[50px]" />
-              </p>
-            </div>
-          </Link>
-        </section>
+        <ContactCard />
       </div>
     </div>
   )

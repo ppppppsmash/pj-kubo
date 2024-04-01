@@ -116,9 +116,10 @@ export function Header() {
 
               <NavigationMenuItem>
                 <Link href="/service" legacyBehavior passHref>
-                  <NavigationMenuLink className={cn(
-                        pathname === "/service" ? "after:scale-x-100 after:scale-y-100" : "")}>
-                    <NavigationMenuTrigger>SERVICE</NavigationMenuTrigger>
+                  <NavigationMenuLink>
+                    <NavigationMenuTrigger
+                      className={cn(pathname === "/service" ? "after:scale-x-100 after:scale-y-100" : "")}
+                    >SERVICE</NavigationMenuTrigger>
                   </NavigationMenuLink>
                 </Link>
                 <NavigationMenuContent>
@@ -126,7 +127,9 @@ export function Header() {
                     <li className="row-span-3">
                       <NavigationMenuLink asChild>
                         <a
-                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                          className={cn(
+                            "flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                          )}
                           href="/service"
                         >
                           {/* <Icons.logo className="h-6 w-6" /> */}
