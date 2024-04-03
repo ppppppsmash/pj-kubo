@@ -24,7 +24,7 @@ const config = {
       colors: {
         kubo: "#00B9E5",
         gray: "#F2F2F2",
-        scroll: "#D3D3D3",
+        scroll: "#333333",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

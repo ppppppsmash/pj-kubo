@@ -45,10 +45,10 @@ export const Hero = () => {
   }, [animate, scope])
 
   return (
-    <div className='space-y-6 md:my-16 absolute top-[15%] sm:top-[25%] w-[90%] sm:max-w-[400px] z-10 left-[5%] sm:left-20'>
+    <div className="space-y-6 md:my-16 absolute top-1/3 sm:top-[25%] w-[80%] sm:w-[90%] sm:max-w-[400px] z-50 left-1/2 -translate-x-1/2 sm:left-20 sm:-translate-x-0">
       <div className='flex flex-col-reverse gap-8 md:flex-row md:justify-between'>
         <motion.div
-          className='flex flex-col gap-4 will-change-[transform,opacity] md:max-w-xl'
+          className="flex flex-col gap-4 will-change-[transform,opacity] md:max-w-xl"
           initial={{
             y: 40,
             opacity: 0
@@ -62,7 +62,7 @@ export const Hero = () => {
           }}
         >
           <h1
-            className="bg-gradient-to-b from-black via-black/90 to-black/70 to-90% bg-clip-text font-title text-2xl
+            className="bg-gradient-to-b from-black via-black/90 to-black/70 to-90% bg-clip-text font-title text-xl
               font-bold leading-9 text-transparent dark:from-white dark:via-white/90 dark:to-white/70
               sm:text-3xl sm:leading-[3.5rem] text-white"
           >
@@ -78,28 +78,6 @@ export const Hero = () => {
             </div>
           </h1>
         </motion.div>
-        {/* <motion.div
-          className='relative size-20 md:size-28'
-          initial={{
-            scale: 0
-          }}
-          animate={{
-            scale: 1
-          }}
-          transition={{
-            duration: 0.3
-          }}
-        >
-          <BlurImage
-            src='/images/avatar.png'
-            className='rounded-full'
-            width={112}
-            height={112}
-            alt='Hong'
-            lazy={false}
-          />
-          <div className='absolute inset-0 -z-10 bg-gradient-to-tl from-purple-700 to-orange-700 opacity-0 blur-2xl md:opacity-50' />
-        </motion.div> */}
       </div>
     </div>
   )
